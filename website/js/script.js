@@ -10,14 +10,16 @@ $(function(){
 	});
 	
 	// Filter-Sachen sollen erst mal unsichtbar sein
-	$('#filter div').hide();
+	$('#filter').hide();
 	$('#filterbutton').click(function(){
 		if ($('#filter').hasClass('offen')){
-			$('#filter div').fadeOut('fast');
-			$('#filter').removeClass('offen');
+			$('#filter')
+				.slideUp('slow')
+				.removeClass('offen');
 		} else {
-			$('#filter').addClass('offen');
-			$('#filter div').slideDown('slow');
+			$('#filter')
+				.addClass('offen')
+				.slideDown('slow');
 		}
 	});
 	

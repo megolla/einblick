@@ -127,26 +127,13 @@ nav {
 		width: 100%;
 	}
 	
+	#filterbutton {
+		cursor: pointer;
+	}
+	
 	#filter {
-		//outline: 1px solid blue;
-		padding-left: 21px;
-		position: relative;
-		height: 36px;
-		
-		&.offen {
-			height: inherit;
-		}
-		
-		#filterbutton {
-			position: absolute;
-			left:0;
-			top: 0;
-			cursor: pointer;
-		}
-		
-		div {
-			//outline: 1px solid red;
-		}
+		margin-left: 21px;
+		margin-top: -2.7em;
 	}
 }
 
