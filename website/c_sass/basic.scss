@@ -1,0 +1,206 @@
+$myFont: 100%/1.5 Constantia,Palatino,Georgia,Times,Serif;
+
+html {
+    overflow-y:scroll;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background: #fff;
+    color: #444;
+    font: $myFont;
+    @include Silbentrennung;
+}
+
+h1, h2, h3, h4, h5, h6 { 
+	text-rendering: optimizeLegibility; 
+}
+
+h1 {
+	font-family: Impact;
+	font-size: 250%;
+	padding: .4em 0;
+	text-transform: uppercase;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+	border-bottom: 1px solid;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+ol {list-style-type: decimal;}
+
+#wrap {
+	@include Box;
+	width:95%;
+	margin: 0 auto;
+	position: relative;
+}
+
+section {
+	@include Clearfix;
+}
+
+header {
+	a {
+		border-bottom: none;
+	}
+	
+	ul {
+		width: 6em;
+		list-style-type: none;
+		position: absolute;
+		top: 0;
+		right: 1em;
+		overflow: auto;
+	}
+	
+	li {
+		float:right;
+		padding: 0 .4em;
+	}
+	
+	.current:before {
+		content: "✓";
+		padding-right: .4em;
+	}
+}
+
+nav {
+	margin: .5em 0;
+	width: 15em;
+	
+	a {
+		border-bottom: none;
+	}
+	
+	.current {
+		font-weight: bold;
+	}
+	
+	ul {
+		list-style-type: none;
+		margin-bottom: 1em;
+	}
+	
+	ul ul {
+		border-style: solid;
+		border-color: #ddd;
+		border-width: 0 0 0 1px;
+		margin-bottom: 0;
+		margin-left: .5em;
+	}
+	
+	ul ul li {
+		padding-left: .3em;
+	}
+	
+	.haupt:after {
+		content: "▼";
+		font-size: 50%;
+		position: relative;
+		top: 0;
+		left: 5px;
+		color: #9a9a9a;
+	}
+	
+	.abstand {
+		margin-top: .7em;
+	}
+	
+	.ausgewaehlt a:after {
+		content: "✓";
+		padding-left: .4em;
+	}
+	
+	li a {
+		display: block;
+		padding: .2em;
+	}
+	
+	input {
+		width: 100%;
+	}
+	
+	#filter {
+		//outline: 1px solid blue;
+		padding-left: 21px;
+		position: relative;
+		height: 36px;
+		
+		&.offen {
+			height: inherit;
+		}
+		
+		#filterbutton {
+			position: absolute;
+			left:0;
+			top: 0;
+			cursor: pointer;
+		}
+		
+		div {
+			//outline: 1px solid red;
+		}
+	}
+}
+
+.bilderGalerie {
+	list-style-type: none;
+	
+	figure {
+		outline: 1px dotted #ccc;
+		width:46%;
+		margin: 0 1em 1em 0;
+		float:left;
+	}
+	
+	img {
+		width: 100%;
+		height: auto;
+	}
+	
+	figcaption {
+		display: block;
+		text-align: center;
+		line-height: 1;
+		font-size: 80%;
+		position: relative;
+		top: -.3em;
+	}
+}
+
+#abdecker {
+	font-family: Impact;
+	text-transform: uppercase;
+	background: rgba(0,0,0,.8);
+	color: #fff;
+	width: 94%;
+	position: fixed;
+	left:1em;
+	top: .5em;
+	bottom: 0;
+	@include Box;
+	padding: .2em 0;
+	@include Abgerundet(3px);
+	cursor: pointer;
+	@include Transition($time: .5s);
+}
+
+#abdecker.weg {
+	@include Verschieben_Waagrecht(-130%);
+}
+
+#abdecker p {
+	width: 100%;
+	font-size: 400%;
+	@include Box;
+	padding: 0 0 0 .1em;
+	line-height: 1;
+	@include OutlineText($Rahmen: #fff);
+}

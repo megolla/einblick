@@ -1,0 +1,10 @@
+// importiert aus Framework "htdocs/_SASS_Framework"
+@import "reset";
+@import "thias";
+
+@import "basic";
+
+// hier die unterschiedlichen Breiten-Stylesheets importieren
+@media only screen and (min-width: 42em){
+	@import "desktop";
+}
