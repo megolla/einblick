@@ -17,7 +17,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-family: Impact;
+	font-family: Impact,Tahoma,Arial,Sans-Serif;
 	font-size: 250%;
 	padding: .4em 0 .2em 0;
 	text-transform: uppercase;
@@ -42,8 +42,15 @@ ol {list-style-type: decimal;}
 	position: relative;
 }
 
-section {
+#content {
 	@include Clearfix;
+}
+
+footer {
+	clear:both;
+	margin: 3em 0;
+	padding-top: .5em;
+	border-top: 1px solid #ccc;
 }
 
 header {
@@ -72,7 +79,6 @@ header {
 }
 
 nav {
-	margin: .5em 0;
 	width: 15em;
 	
 	a {
@@ -124,7 +130,9 @@ nav {
 	}
 	
 	input {
-		width: 60%;
+		width: 100%;
+		@include Abgerundet(8px);
+		border: 1px solid #ccc;
 	}
 	
 	#filterbutton {
@@ -132,8 +140,7 @@ nav {
 	}
 	
 	#filter {
-		margin-left: 23px;
-		margin-top: -2.8em;
+		margin: -2.8em 0 1.5em 23px;
 		font-size: 85%;
 	}
 }
@@ -142,10 +149,19 @@ nav {
 	list-style-type: none;
 	
 	figure {
-		outline: 1px dotted #ccc;
-		width:46%;
+		width:100%;
 		margin: 0 1em 1em 0;
 		float:left;
+		background: rgba(0,0,0,.1);
+		border: 1px solid rgba(0,0,0,.1);
+		@include Transition($time: .1s);
+		box-shadow: 0 0 2px 2px rgba(0,0,0,.06);
+	}
+	
+	figure:hover,
+	figure:active {
+		@include Skalieren(1.02);
+		
 	}
 	
 	img {
@@ -160,6 +176,7 @@ nav {
 		font-size: 80%;
 		position: relative;
 		top: -.3em;
+		padding: .2em;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -167,7 +184,7 @@ nav {
 }
 
 #abdecker {
-	font-family: Impact;
+	font-family: Impact,Tahoma,Arial,Sans-Serif;
 	text-transform: uppercase;
 	background: rgba(0,0,0,.8);
 	color: #fff;
@@ -193,5 +210,8 @@ nav {
 	@include Box;
 	padding: 0 0 0 .1em;
 	line-height: 1;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 	@include OutlineText($Rahmen: #fff);
 }

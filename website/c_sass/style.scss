@@ -4,7 +4,17 @@
 
 @import "basic";
 
-// hier die unterschiedlichen Breiten-Stylesheets importieren
-@media only screen and (min-width: 42em){
-	@import "desktop";
+// Stylesheet ab 25em (ca. 400px) Breite
+@media only screen and (min-width: 25em){
+	@import "q_25";
+}
+
+// Stylesheet ab 48em (ca. 768px) Breite
+@media only screen and (min-width: 48em){
+	@import "q_48";
+}
+
+// Stylesheet ab 64em (ca. 1024px) Breite
+@media only screen and (min-width: 64em){
+	@import "q_64";
 }

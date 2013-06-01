@@ -1,0 +1,27 @@
+// Stylesheet ab 64em (ca. 1024px) Breite
+
+#wrap {
+	max-width: 75em
+}
+
+h1 {
+	padding-bottom: 1em;
+}
+
+nav {
+	// outline: 1px solid blue;
+	width: 20%;
+	float: left;
+}
+
+#content {
+	// outline: 1px solid red;
+	width: 79%;
+	float:right;
+}
+
+.bilderGalerie {
+	figure {
+		width:31%;
+	}
+}

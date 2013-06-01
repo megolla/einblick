@@ -1,4 +1,5 @@
 //@codekit-prepend "fitText.js";
+//@codekit-prepend "riseToolbar.js"; 
 
 $(function(){
 	// Schrift via FitText anpassen
@@ -60,7 +61,9 @@ $(function(){
 	// alle Filter zurücksetzen
 	$('#filterZurueckSetzen').click(function(){
 		$('nav li.ausgewaehlt').removeClass('ausgewaehlt');
+		
 		Filtersymbol();
+		
 		return false;
 	});
 });

@@ -4,7 +4,7 @@
 <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="de"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="de"> <!--<![endif]-->
 <head>
-<title>Einblick 2013</title>
+<title>Einblick 2013 / Projekt</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
@@ -27,8 +27,7 @@
 <div id="wrap">
 
 <header>
-
-<h1><a href="index.html">einblick</a></h1>
+<h1><a href="index.html" title=''>einblick</a></h1>
 <ul>
 <li><a href="#wrap">en</a></li>
 <li class="current"><a href="#wrap">de</a></li>
@@ -40,13 +39,16 @@
 <ul>
 <li><a href="#wrap">Ausstellung</a></li>
 <li><a href="#wrap">Über uns</a></li>
-<li><a href="#wrap">Arbeiten</a></li>
+<li class="current"><a href="#wrap">Arbeiten</a></li>
 </ul>
 
+<img id="filterbutton" src="p/filter.gif" alt="filter" width="21" height="36">
+
 <!-- filter-->
+<div id="filter">
 <ul>
 <li>
-	<a href="#wrap">Jahrgang</a>
+	<a href="#wrap" class="haupt">Jahrgang</a>
 
 	<ul>
 		<li><a href="#wrap">2012</a></li>
@@ -55,7 +57,7 @@
 </li>
 
 <li>
-	<a href="#wrap">Studienrichtung</a>
+	<a href="#wrap" class="haupt">Studienrichtung</a>
 	<ul>
 		<li><a href="#wrap">Fotodesign</a></li>
 		<li><a href="#wrap">Industriedesign</a></li>
@@ -64,7 +66,7 @@
 </li>
 
 <li>
-	<a href="#wrap">Kategorie</a>
+	<a href="#wrap" class="haupt">Kategorie</a>
 	<ul>
 		<li><a href="#wrap">Modefotografie</a></li>
 		<li><a href="#wrap">Porträtfotografie</a></li>
@@ -87,40 +89,50 @@
 		<li><a href="#wrap">Motion Design</a></li>
 </ul>
 </li>
+
+<li><a href="#wrap" id="filterZurueckSetzen">Filter zurücksetzen</a></li>
 </ul>
 
-<p id="filterZurueckSetzen">Filter zurücksetzen</p>
-
 <input type="search" placeholder="Schlagwort"> <br>
-<input type="search" placeholder="Name"> 
+<input type="search" placeholder="Name">
+</div><!-- /filter -->
 
 </nav>
 
 <section id="content">
 
 <article>
-	<img src="p/platzhalter.png" alt="platzhalter" width="100" height="56">
-    <img src="p/platzhalter.png" alt="platzhalter" width="100" height="56">
-    <img src="p/platzhalter.png" alt="platzhalter" width="100" height="56">
-    <img src="p/platzhalter.png" alt="platzhalter" width="100" height="56">
 
-   <h1>Titel der Arbeit</h1>
-   <p>„Zensur“ ist Titel einer gestalterischen Bachelorarbeit, die sich auf 
+<h2>Zensur im Alltag der öffentlichen Medien</h2>
+
+<ul class="projektbilder">
+	<li><img src="p/projekt_demo/2012-08-19-18.19.07.jpg" alt="2012-08-19-18.19.07" width="800" height="600"></li>
+	<li><img src="p/projekt_demo/2012-08-30-15.27.01.jpg" alt="2012-08-30-15.27.01" width="800" height="600"></li>
+	<li><img src="p/projekt_demo/IMG_0250_brompton_antiAtom.jpg" alt="IMG_0250_brompton_antiAtom" width="800" height="600"></li>
+	<li><img class="hochformat" src="p/projekt_demo/IMG_0436.jpg" alt="IMG_0436" width="600" height="800"></li>
+	<li><img src="p/projekt_demo/IMG_0753_Frankfurt_Skyline.jpg" alt="IMG_0753_Frankfurt_Skyline" width="800" height="600"></li>
+	<li><img src="p/projekt_demo/IMG_1257_kaputtes_Fahrrad_Frankfurt.jpg" alt="IMG_1257_kaputtes_Fahrrad_Frankfurt" width="800" height="600"></li>
+	<li><img src="p/projekt_demo/IMG_9692.jpg" alt="IMG_9692" width="800" height="600"></li>
+	<li><img class="hochformat" src="p/projekt_demo/moultonGardasee.jpg" alt="moultonGardasee" width="600" height="800"></li>
+	<li><img src="p/projekt_demo/wasserfechten_sirmione-Kopie.jpg" alt="wasserfechten_sirmione-Kopie" width="800" height="600"></li>
+</ul>
+
+<p>„Zensur“ ist Titel einer gestalterischen Bachelorarbeit, die sich auf 
 typografische Weise mit Zensur auseinandersetzt. Es handelt sich um ein Buch mit der Größe von 36cm x 27cm: ein unhandliches Format für ein unhandliches Thema.</p>
 <p>Zu Beginn galt es herauszufinden, welche Arten von Zensur es gibt, wo Zensur stattfindet und wie sie sich auswirkt. Bei intensiver Betrachtung verschwimmen allerdings die Grenzen, ab wann man von einer Zensur sprechen kann. Zudem war es schwierig, an konkrete Fälle von Zensur zu kommen. Also entschied ich mich, deren Auswirkungen darzustellen.</p>
 <p>Durch Zensur kann nur ein unvollständiges Gesamtbild entstehen, und nur durch intensive Auseinandersetzung mit speziellen Themen merkt man, dass in der Themenaufarbeitung etwas nicht stimmt bzw. dass etwas fehlt. Dieses Gefühl des„Fehlens“, des „Hier-stimmt-etwas-nicht“ sollte dem Betrachter typografisch vermittelt werden.</p>
 
+<aside>
+<img src="p/mustermann.jpg" alt="mustermann" width="319" height="425">
+<h3>Kontaktdaten</h3>
+<h2>Heiko Richard Paul Mustermann</h2>
+<p><a href="mailto:paul_mustermann@hotmail.com" title=''>paul_mustermann@hotmail.com</a><br>
+<a href="http://einblick.hm.edu/">lange-musterseiten-name.com</a></p>
 
-	<aside>
-    <img src="p/platzhalter.png" alt="platzhalter" width="100" height="56"> 
-    <h3>Kontaktdaten</h3>
-    <h2>Denise Aebischer Trebo</h2>
-    <p>denise.aebischer@hotmail.com<br>
-    <a href="http://deniseaebischer.com/">deniseaebischer.com</a></p>
-    
-    <h3>Betreuer</h3>
-    <p>Prof. Xuyen Dam</p>
-    </aside>
+<h3>Betreuer</h3>
+<p>Prof. Xuyen Dam<br>
+Prof. Kunigunde Paula Musterfrau</p>
+</aside>
 
 <!-- der Zurückbutton bringt mich zur Übersichtsseite mit meinen Filtereinstellungen zurück-->
 <a href="#wrap">zurück</a>
