@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
 	font-family: Impact;
 	font-size: 250%;
-	padding: .4em 0;
+	padding: .4em 0 .2em 0;
 	text-transform: uppercase;
 }
 
@@ -85,7 +85,7 @@ nav {
 	
 	ul {
 		list-style-type: none;
-		margin-bottom: 1em;
+		//margin-bottom: 1em;
 	}
 	
 	ul ul {
@@ -120,11 +120,11 @@ nav {
 	
 	li a {
 		display: block;
-		padding: .2em;
+		//padding: .2em;
 	}
 	
 	input {
-		width: 100%;
+		width: 60%;
 	}
 	
 	#filterbutton {
@@ -132,8 +132,9 @@ nav {
 	}
 	
 	#filter {
-		margin-left: 21px;
-		margin-top: -2.7em;
+		margin-left: 23px;
+		margin-top: -2.8em;
+		font-size: 85%;
 	}
 }
 
@@ -159,6 +160,9 @@ nav {
 		font-size: 80%;
 		position: relative;
 		top: -.3em;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 }
 

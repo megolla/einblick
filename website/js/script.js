@@ -23,6 +23,8 @@ $(function(){
 		}
 	});
 	
+	Filtersymbol();
+	
 	// Filter bei Jahrgang, Studienrichtung & kategorie erst mal unsichtbar
 	$('nav ul ul').hide();
 	$('nav .haupt').click(function(){
@@ -50,12 +52,24 @@ $(function(){
 			$(this).addClass('ausgewaehlt');
 		}
 		
+		Filtersymbol();
+		
 		return false;
 	});
 	
 	// alle Filter zurücksetzen
 	$('#filterZurueckSetzen').click(function(){
 		$('nav li.ausgewaehlt').removeClass('ausgewaehlt');
+		Filtersymbol();
 		return false;
 	});
 });
+
+// Filter-Button bekommt Warnsymbol, wenn Filter aktiviert sind
+function Filtersymbol(){
+	if ($('nav ul ul li').hasClass('ausgewaehlt')){
+		$('#filterbutton').attr({src: 'p/filter_warnung.gif'});
+	} else {
+		$('#filterbutton').attr({src: 'p/filter.gif'});
+	}
+}
