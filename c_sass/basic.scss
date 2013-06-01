@@ -26,7 +26,7 @@ h1 {
 a {
 	color: inherit;
 	text-decoration: none;
-	border-bottom: 1px solid;
+	border-bottom: 1px dotted;
 }
 
 ul {
@@ -51,6 +51,10 @@ footer {
 	margin: 3em 0;
 	padding-top: .5em;
 	border-top: 1px solid #ccc;
+	
+	a {
+		border-bottom: none;
+	}
 }
 
 header {
@@ -198,20 +202,78 @@ nav {
 	@include Abgerundet(3px);
 	cursor: pointer;
 	@include Transition($time: .5s);
+	
+	&.weg {
+		@include Verschieben_Waagrecht(-130%);
+	}
+	
+	p {
+		width: 100%;
+		font-size: 400%;
+		@include Box;
+		padding: 0 0 0 .1em;
+		line-height: 1;
+		white-space: nowrap;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+		@include OutlineText($Rahmen: #fff);
+	}
 }
 
-#abdecker.weg {
-	@include Verschieben_Waagrecht(-130%);
+// Artikel auf der Projektseite
+article {
+	h1.projekttitel {
+		font-family: Constantia,Palatino,Georgia,Times,Serif;
+		text-transform:none;
+		text-align: center;
+		font-size: 133%;
+		line-height: 1.2;
+	}
+	p+p {
+		text-indent: 1.5em;
+	}
+	aside {
+		margin-top: 2em;
+		border-top: 1px dotted #ccc;
+		padding: 1em 0;
+		@include Clearfix;
+		
+		h3 {
+			text-transform: uppercase;
+			margin-top: 1.5em;
+		}
+		
+		h3:first-child {
+			margin-top: 0;
+		}
+		
+		h2 {
+			font-size: 100%;
+			font-weight: bold;
+			margin-bottom: 0;
+		}
+		
+		img {
+			width: 30%;
+			max-width: 180px;
+			height: auto;
+			float: left;
+		}
+		
+		div {
+			margin-left: 34%;
+		}
+	}
 }
 
-#abdecker p {
-	width: 100%;
-	font-size: 400%;
-	@include Box;
-	padding: 0 0 0 .1em;
-	line-height: 1;
-	white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-	@include OutlineText($Rahmen: #fff);
+// Bildergalerie auf der Projektseite
+.projektbilder {
+	img {
+		width: 100%;
+		height: auto;
+	}
+	
+	.hochformat {
+		// was kann man da machen?
+	}
 }

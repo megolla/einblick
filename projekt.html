@@ -14,7 +14,7 @@
 <meta name="viewport" content="width=device-width; initial-scale=1.0;">
 <link rel="shortcut icon" href="/favicon.ico">
 
-<link rel="stylesheet" href="c/style.css?v=1.0" />
+<link rel="stylesheet" href="c/style.css?v=1.11" />
 <link rel="stylesheet" media="print" href="c/print.css" />
 
 <!--[if IE]>
@@ -103,9 +103,9 @@
 
 <article>
 
-<h2>Zensur im Alltag der öffentlichen Medien</h2>
-
-<ul class="projektbilder">
+<h1 class="projekttitel">Zensur im Alltag der öffentlichen Medien</h1>
+<div class="flexslider">
+<ul class="slides projektbilder">
 	<li><img src="p/projekt_demo/2012-08-19-18.19.07.jpg" alt="2012-08-19-18.19.07" width="800" height="600"></li>
 	<li><img src="p/projekt_demo/2012-08-30-15.27.01.jpg" alt="2012-08-30-15.27.01" width="800" height="600"></li>
 	<li><img src="p/projekt_demo/IMG_0250_brompton_antiAtom.jpg" alt="IMG_0250_brompton_antiAtom" width="800" height="600"></li>
@@ -116,15 +116,19 @@
 	<li><img class="hochformat" src="p/projekt_demo/moultonGardasee.jpg" alt="moultonGardasee" width="600" height="800"></li>
 	<li><img src="p/projekt_demo/wasserfechten_sirmione-Kopie.jpg" alt="wasserfechten_sirmione-Kopie" width="800" height="600"></li>
 </ul>
+</div><!-- /flexslider -->
 
+<div class="projekttext">
 <p>„Zensur“ ist Titel einer gestalterischen Bachelorarbeit, die sich auf 
 typografische Weise mit Zensur auseinandersetzt. Es handelt sich um ein Buch mit der Größe von 36cm x 27cm: ein unhandliches Format für ein unhandliches Thema.</p>
 <p>Zu Beginn galt es herauszufinden, welche Arten von Zensur es gibt, wo Zensur stattfindet und wie sie sich auswirkt. Bei intensiver Betrachtung verschwimmen allerdings die Grenzen, ab wann man von einer Zensur sprechen kann. Zudem war es schwierig, an konkrete Fälle von Zensur zu kommen. Also entschied ich mich, deren Auswirkungen darzustellen.</p>
 <p>Durch Zensur kann nur ein unvollständiges Gesamtbild entstehen, und nur durch intensive Auseinandersetzung mit speziellen Themen merkt man, dass in der Themenaufarbeitung etwas nicht stimmt bzw. dass etwas fehlt. Dieses Gefühl des„Fehlens“, des „Hier-stimmt-etwas-nicht“ sollte dem Betrachter typografisch vermittelt werden.</p>
+</div><!-- /projekttext -->
 
 <aside>
 <img src="p/mustermann.jpg" alt="mustermann" width="319" height="425">
-<h3>Kontaktdaten</h3>
+<div>
+<h3>DesignerIn</h3>
 <h2>Heiko Richard Paul Mustermann</h2>
 <p><a href="mailto:paul_mustermann@hotmail.com" title=''>paul_mustermann@hotmail.com</a><br>
 <a href="http://einblick.hm.edu/">lange-musterseiten-name.com</a></p>
@@ -132,22 +136,25 @@ typografische Weise mit Zensur auseinandersetzt. Es handelt sich um ein Buch mit
 <h3>Betreuer</h3>
 <p>Prof. Xuyen Dam<br>
 Prof. Kunigunde Paula Musterfrau</p>
+</div>
 </aside>
 
 <!-- der Zurückbutton bringt mich zur Übersichtsseite mit meinen Filtereinstellungen zurück-->
-<a href="#wrap">zurück</a>
+<a href="index.html">zurück</a>
 
 </article>
 
 </section>
 
-<footer><a href="#wrap" title=''>Impressum</a></footer>
+<footer><a href="#wrap" title=''>Impressum</a> | <a href="eingabe_formular/index.html" title=''>Login</a></footer>
 
 </div><!-- /wrap -->
 
 <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
 <script>!window.jQuery && document.write('<script src="js/jquery-1.10.0.min.js"><\/script>')</script>
-<script src="js/script-ck.js?v=1.0"></script>
+<!-- ACHTUNG: Projekte brauchen Flexslider! -->
+<script src="js/jquery.flexslider-min.js"></script>
+<script src="js/script-ck.js?v=1.11"></script>
 
 </body>
 </html>

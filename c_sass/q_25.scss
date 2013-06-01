@@ -5,3 +5,7 @@
 		width:45%;
 	}
 }
+
+.projekttext {
+	@include Mehrspaltig_FixBreite;
+}

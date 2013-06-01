@@ -29,24 +29,23 @@
 	<img src="p/hm_logo.gif" alt="hm_logo">
 </header>
 
-<h1>Einblick 2013 - Upload der Abschlussarbeit</h1>
+	<h1>Einblick 2013 - Upload der Abschlussarbeit</h1>
 
-<p>Bitte laden Sie hier alle relevanten Texte und Bilder hoch, die demnächst über Ihre Arbeit auf der Webseite <a href="http://www.einblick.hm.edu">Einblick</a> erscheinen sollen.
-
-
+	<p>Bitte laden Sie hier alle relevanten Texte und Bilder hoch, die demnächst über Ihre Bachelor- oder Master-Abschlussarbeit an der Hochschule München auf der Webseite <a href="http://www.einblick.hm.edu">Einblick</a> erscheinen sollen.</p>
 
 <form>
+<div id="pflicht">* Pflichtfelder</div>
 	<h2>Informationen zum Student</h2>
 	
 	<table>
 		<tr>
-			<td>Vorname*</td>
-			<td><input type="text" placeholder="Vorname"></td>
+			<td>Vorname *</td>
+			<td><input type="text" placeholder="Vorname" required></td>
 		</tr>
 		
 		<tr>
-			<td>Nachname*</td>
-			<td><input type="text" placeholder="Nachname"></td>
+			<td>Nachname *</td>
+			<td><input type="text" placeholder="Nachname" required></td>
 		</tr>
 		
 		<tr>
@@ -56,7 +55,7 @@
 		
 		<tr>
 			<td>Homepage 
-			<div class="Hilfetext">Durch diese Angabe können Sie den Traffic auf Ihrer Webseite erhöhen (z.B. besseres Google-Ranking durch Verlinkung von der Hochschul-Seite).</div>
+			<div class="Hilfetext">Durch diese Angabe können Sie den Traffic auf Ihrer Webseite erhöhen (u.a. besseres Google-Ranking durch Verlinkung von der Hochschul-Seite).</div>
 			</td>
 			<td><input type="text" placeholder="Homepage"></td>
 		</tr>
@@ -67,9 +66,9 @@
 		</tr>
 		
 		<tr>
-			<td>Studienabschluss*</td>
+			<td>Studienabschluss *</td>
 			<td>
-				<input type="radio" id="Bachelor" name="Abschluss" value="Bachelor">
+				<input type="radio" id="Bachelor" name="Abschluss" value="Bachelor" required>
 				<label for="Bachelor">Bachelor</label><br>
 		
 				<input type="radio" id="Master" name="Abschluss" value="Master">
@@ -78,9 +77,9 @@
 		</tr>
 		
 		<tr>
-			<td>Studienrichtung*</td>
+			<td>Studienrichtung *</td>
 			<td>
-				<input type="radio" id="Fotodesign" name="Studienrichtung" value="Fotodesign">
+				<input type="radio" id="Fotodesign" name="Studienrichtung" value="Fotodesign" required>
 				<label for="Fotodesign">Fotodesign</label><br>
 			
 				<input type="radio" id="Industriedesign" name="Studienrichtung" value="Industriedesign">
@@ -98,22 +97,42 @@
 	<table>
 		
 		<tr>
-			<td>Titel der Abschlussarbeit (deutsch)*</td>
-			<td><input type="text" placeholder="Titel der Abschlussarbeit (deutsch)"></td>
+			<td>Titel der Abschlussarbeit (deutsch) *</td>
+			<td><input type="text" placeholder="Titel der Abschlussarbeit (deutsch)" required></td>
 		</tr>
 		
 		<tr>
-			<td>Titel der Abschlussarbeit (englisch)*</td>
-			<td><input type="text" placeholder="Titel der Abschlussarbeit (englisch)"></td>
+			<td>Titel der Abschlussarbeit (englisch) *</td>
+			<td><input type="text" placeholder="Titel der Abschlussarbeit (englisch)" required></td>
+		</tr>
+				
+		<tr>
+			<td>Beschreibung der Abschlussarbeit * <div class="Hilfetext">(deutsch, max. 900 Zeichen)</div></td>
+			<td><textarea placeholder="Prägnante Beschreibung der Abschlussarbeit (deutsch)" required></textarea></td>
+		</tr>
+		
+		<tr>
+			<td>Beschreibung der Abschlussarbeit * <div class="Hilfetext">(englisch, max. 900 Zeichen)</div></td>
+			<td><textarea placeholder="Prägnante Beschreibung der Abschlussarbeit (englisch)" required></textarea></td>
+		</tr>
+
+		<tr>
+			<td>Betreuungsperson 1 *</td>
+			<td><input type="text" placeholder="Name des Dozenten" required></td>
+		</tr>
+
+		<tr>
+			<td>Betreuungsperson 2</td>
+			<td><input type="text" placeholder="Name des Dozenten"></td>
 		</tr>
 		
 		<tr>
 			<td>Kategorien 
-				<div class="Hilfetext">Eine wichtige Funktion der Webseite ist die Filterung nach Kategorien. Klicken Sie an, zu welcher Kategorie Ihre Arbeit passt (max. 3 Kategorien). Auch fächerübergreifende Kombinationen sind möglich (keine Einschränkung nach Studienrichtung).</div>
+				<div class="Hilfetext">Eine wichtige Funktion der Webseite ist die Filterung nach Kategorien. Klicken Sie an, zu welcher Kategorie Ihre Arbeit passt (max. 5 Kategorien). Auch fächerübergreifende Kombinationen sind möglich (keine Einschränkung nach Studienrichtung).</div>
 			</td>
 			<td>
 				<div>
-					<input type="checkbox" id="Architekturfotografie" name="Kategorie" value="Architekturfotografie"> 
+					<input type="checkbox" id="Architekturfotografie" name="Kategorie" value="Architekturfotografie">
 					<label for="Architekturfotografie">Architekturfotografie</label><br>
 		
 					<input type="checkbox" id="Bildjournalismus" name="Kategorie" value="Bildjournalismus"> 
@@ -180,50 +199,48 @@
 		<tr>
 			<td>
 				Begriffe für Schlagwortsuche
-				<div class="Hilfetext">Eine weitere Filtermöglichkeit auf der Webseite ist die Suchfunktion nach Schlagwörtern. Bitte geben Sie treffende Schlagwörter ein, unter denen Ihre Arbeit gefunden werden kann (z.B. "Nachhaltigkeit", ...). Bitte unbedingt auf korrekte Rechtschreibung achten! (max. 5 Schlagwörter)</div>
+				<div class="Hilfetext">Eine weitere Filtermöglichkeit auf der Webseite ist die Suchfunktion nach Schlagwörtern. Bitte geben Sie treffende Schlagwörter ein, unter denen Ihre Arbeit gefunden werden kann (z.B. "Nachhaltigkeit", "Ergonomie", etc.). Bitte unbedingt auf korrekte Rechtschreibung achten! (max. 5 Schlagwörter)</div>
 			</td>
 			<td>
+				<div class="Schlagwort">
 				<input type="text" placeholder="Schlagwort"><br>
 				<input type="text" placeholder="Schlagwort"><br>
 				<input type="text" placeholder="Schlagwort"><br>
 				<input type="text" placeholder="Schlagwort"><br>
 				<input type="text" placeholder="Schlagwort">
+				</div>
 			</td>
 		</tr>
 		
-		<tr>
-			<td>Betreuungsperson 1*</td>
-			<td><input type="text" placeholder="Name des Dozenten"></td>
+				<tr>
+			<td>
+				Begriffe für Schlagwortsuche (englisch)
+				<div class="Hilfetext">Bitte die oben genannten Schlagworte hier auch auf Englisch eintragen!</div>
+			</td>
+			<td>
+				<div class="Schlagwort">
+				<input type="text" placeholder="keyword"><br>
+				<input type="text" placeholder="keyword"><br>
+				<input type="text" placeholder="keyword"><br>
+				<input type="text" placeholder="keyword"><br>
+				<input type="text" placeholder="keyword">
+				</div>
+			</td>
 		</tr>
 
 		<tr>
-			<td>Betreuungsperson 2</td>
-			<td><input type="text" placeholder="Name des Dozenten"></td>
+			<td>Kleines Vorschaubild der Arbeit * <div class="Hilfetext">Dieses Vorschaubild ist der "Lockvogel" Ihrer Arbeit auf der Startseite. (JPG oder PNG, 120x80 Pixel)</div></td>
+			<td><input type="file" required></td>
 		</tr>
 		
 		<tr>
-			<td>Beschreibung der Abschlussarbeit* <div class="Hilfetext">(deutsch, max. 900 Zeichen)</div></td>
-			<td><textarea placeholder="Prägnante Beschreibung der Abschlussarbeit (deutsch)"></textarea></td>
+			<td>Bilder der Arbeit * <div class="Hilfetext">Bitte laden Sie maximal 7 aussagekräftige Bilder hoch. (JPG oder PNG, max. 3000x3000 Pixel)</div></td>
+			<td><input type="file" multiple required></td>
 		</tr>
 		
 		<tr>
-			<td>Beschreibung der Abschlussarbeit* <div class="Hilfetext">(englisch, max. 900 Zeichen)</div></td>
-			<td><textarea placeholder="Prägnante Beschreibung der Abschlussarbeit (deutsch)"></textarea></td>
-		</tr>
-
-		<tr>
-			<td>Kleines Vorschaubild der Arbeit <div class="Hilfetext">Dieses Vorschaubild ist der "Lockvogel" deiner Arbeit auf der Startseite. (JPG oder PNG, 120x80 Pixel)</div></td>
-			<td><input type="file"></td>
-		</tr>
-		
-		<tr>
-			<td>Bilder der Arbeit <div class="Hilfetext">Bitte lade maximal 7 aussagekräftige Bilder hoch. (JPG oder PNG, max. 3000x3000 Pixel)</div></td>
-			<td><input type="file" multiple></td>
-		</tr>
-		
-		<tr>
-			<td><input type="checkbox" id="Zustimmung" name="Zustimmung" value="Zustimmung"></td>
-			<td><label for="Zustimmung">Hiermit stimme ich der medienübergreifenden Veröffentlichung meiner Abschlussarbeit im Rahmen der Hochschulkommunikation zu.<br>Ich bin für alle Inhalte selbst verantwortlich.</label></td>
+			<td><input type="checkbox" id="Zustimmung" name="Zustimmung" value="Zustimmung" required></td>
+			<td><label for="Zustimmung">Hiermit stimme ich der medienübergreifenden Veröffentlichung meiner Abschlussarbeit im Rahmen der Hochschulkommunikation zu und zeichne mich für alle Inhalte selbst verantwortlich. *</label></td>
 		</tr>
 	</table>
 	
@@ -235,10 +252,6 @@
 </form>
 
 </div><!-- /wrap -->
-
-<script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
-<script>!window.jQuery && document.write('<script src="js/jquery-1.10.0.min.js"><\/script>')</script>
-<script src="js/script-ck.js?v=1.0"></script>
 
 </body>
 </html>
