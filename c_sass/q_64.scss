@@ -12,6 +12,23 @@ nav {
 	// outline: 1px solid blue;
 	width: 20%;
 	float: left;
+	
+	ul#hauptmenu {
+		//outline: 1px solid #ccc;
+		position: inherit;
+		left: 0;
+		width: auto;
+		
+		li {
+			width: 100%;
+			float: none;
+			
+			a:after {
+				content: "";
+				margin-left: 0;
+			}
+		}
+	}
 }
 
 #content {

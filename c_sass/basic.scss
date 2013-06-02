@@ -19,7 +19,6 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
 	font-family: Impact,Tahoma,Arial,Sans-Serif;
 	font-size: 250%;
-	padding: .4em 0 .2em 0;
 	text-transform: uppercase;
 }
 
@@ -63,6 +62,7 @@ header {
 	}
 	
 	ul {
+		font-size: 80%;
 		width: 6em;
 		list-style-type: none;
 		position: absolute;
@@ -73,7 +73,8 @@ header {
 	
 	li {
 		float:right;
-		padding: 0 .4em;
+		padding: .3em .4em;
+		text-align: right;
 	}
 	
 	.current:before {
@@ -84,6 +85,7 @@ header {
 
 nav {
 	width: 15em;
+	margin-top: -.6em;
 	
 	a {
 		border-bottom: none;
@@ -96,6 +98,31 @@ nav {
 	ul {
 		list-style-type: none;
 		//margin-bottom: 1em;
+	}
+	
+	ul#hauptmenu {
+		//outline: 1px solid #ccc;
+		position: relative;
+		left: -.7em;
+		width: 20em;
+		@include Clearfix;
+		
+		li {
+			width: 32%;
+			float:right;
+			
+			a:after {
+				content: "//";
+				margin-left: .5em;
+			}
+		}
+		
+		li:nth-of-type(1){
+			a:after {
+				content: "";
+				margin-left: 0;
+			}
+		}
 	}
 	
 	ul ul {
@@ -141,6 +168,7 @@ nav {
 	
 	#filterbutton {
 		cursor: pointer;
+		margin-top: -.3em;
 	}
 	
 	#filter {
@@ -194,6 +222,7 @@ nav {
 	color: #fff;
 	width: 94%;
 	position: fixed;
+	z-index: 1000;
 	left:1em;
 	top: .5em;
 	bottom: 0;
