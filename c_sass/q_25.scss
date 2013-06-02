@@ -1,11 +1,5 @@
 // Stylesheet ab 25em (ca. 400px) Breite
 
-.bilderGalerie {
-	figure {
-		width:45%;
-	}
-}
-
 .projekttext {
 	@include Mehrspaltig_FixBreite;
 }

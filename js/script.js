@@ -49,8 +49,12 @@ $(function(){
 	$('nav ul ul li').click(function(){
 		if ($(this).hasClass('ausgewaehlt')){
 			$(this).removeClass('ausgewaehlt');
+			var clicktext = $(this).text();
+			Bildereinblenden(clicktext);
 		} else {
 			$(this).addClass('ausgewaehlt');
+			var clicktext = $(this).text();
+			Bilderausblenden(clicktext);
 		}
 		
 		Filtersymbol();
@@ -62,18 +66,57 @@ $(function(){
 	$('#filterZurueckSetzen').click(function(){
 		$('nav li.ausgewaehlt').removeClass('ausgewaehlt');
 		
+		$('.bilderGalerie .fd').fadeIn(1000);
+		$('.bilderGalerie .id').fadeIn(1000);
+		$('.bilderGalerie .kd').fadeIn(1000);
+		
 		Filtersymbol();
 		
 		return false;
 	});
 });
 
+// Bilder ausblenden, wenn diese nicht in der richtige Kategorie sind
+// das ist noch gar nicht gut programmiert und macht noch nicht richtig Sinn - da müssen PROFIS dran!!!!
+function Bilderausblenden(clicktext){
+	if (clicktext == 'Fotodesign'){
+		var ausblenden_1 = '.bilderGalerie .id';
+		var ausblenden_2 = '.bilderGalerie .kd';
+	} else if (clicktext == 'Industriedesign'){
+		var ausblenden_1 = '.bilderGalerie .fd';
+		var ausblenden_2 = '.bilderGalerie .kd';
+	} else if (clicktext == 'Kommunikationsdesign'){
+		var ausblenden_1 = '.bilderGalerie .fd';
+		var ausblenden_2 = '.bilderGalerie .id';
+	}
+	
+	$(ausblenden_1).fadeOut(1000);
+	$(ausblenden_2).fadeOut(1000);
+}
+
+// Bilder ausblenden, wenn diese nicht in der richtige Kategorie sind
+function Bildereinblenden(clicktext){
+	if (clicktext == 'Fotodesign'){
+		var einblenden_1 = '.bilderGalerie .id';
+		var einblenden_2 = '.bilderGalerie .kd';
+	} else if (clicktext == 'Industriedesign'){
+		var einblenden_1 = '.bilderGalerie .fd';
+		var einblenden_2 = '.bilderGalerie .kd';
+	} else if (clicktext == 'Kommunikationsdesign'){
+		var einblenden_1 = '.bilderGalerie .fd';
+		var einblenden_2 = '.bilderGalerie .id';
+	}
+	
+	$(einblenden_1).fadeIn(1000);
+	$(einblenden_2).fadeIn(1000);
+}
+
 // Filter-Button bekommt Warnsymbol, wenn Filter aktiviert sind
 function Filtersymbol(){
 	if ($('nav ul ul li').hasClass('ausgewaehlt')){
-		$('#filterbutton').attr({src: 'p/filter_warnung.gif'});
+		$('#filterbutton').attr({src: 'assets/filter_warnung.gif'});
 	} else {
-		$('#filterbutton').attr({src: 'p/filter.gif'});
+		$('#filterbutton').attr({src: 'assets/filter.gif'});
 	}
 }
 

@@ -6,7 +6,6 @@
 <head>
 <title>Einblick 2013 - Upload der Abschlussarbeit</title>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 <meta name="description" content="">
 <meta name="author" content="Hochschule München, Fakultät 12 Design,  5/29/13">
@@ -29,9 +28,11 @@
 	<img src="p/hm_logo.gif" alt="hm_logo">
 </header>
 
-	<h1>Einblick 2013 - Upload der Abschlussarbeit</h1>
+	<h1>Einblick 2013 – Upload der Abschlussarbeit</h1>
 
-	<p>Bitte laden Sie hier alle relevanten Texte und Bilder hoch, die demnächst über Ihre Bachelor- oder Master-Abschlussarbeit an der Hochschule München auf der Webseite <a href="http://www.einblick.hm.edu">Einblick</a> erscheinen sollen.</p>
+	<p>Bitte laden Sie hier alle relevanten Texte und Bilder hoch, die demnächst über Ihre Bachelor- oder Master-Abschlussarbeit an der Hochschule&#160;München auf der Webseite <a href="http://www.einblick.hm.edu">Einblick</a> erscheinen sollen.</p>
+	
+<p style="color:red"><em>Mit <strong>*</strong> markierte Felder sind <strong>Pflichtfelder</strong> und müssen ausgefüllt werden!</em></p>
 
 <form>
 <div id="pflicht">* Pflichtfelder</div>
@@ -61,7 +62,7 @@
 		</tr>
 		
 		<tr>
-			<td>Portrait-Foto <div class="Hilfetext">(JPG oder PNG, max. 50x50 Pixel)</div></td>
+			<td>Portrait-Foto <div class="Hilfetext">(Hochformat, JPG oder PNG, max. 240x320 Pixel, 72 dpi)</div></td>
 			<td><input type="file"></td>
 		</tr>
 		
@@ -127,12 +128,12 @@
 		</tr>
 		
 		<tr>
-			<td>Kategorien 
+			<td>Kategorien *
 				<div class="Hilfetext">Eine wichtige Funktion der Webseite ist die Filterung nach Kategorien. Klicken Sie an, zu welcher Kategorie Ihre Arbeit passt (max. 5 Kategorien). Auch fächerübergreifende Kombinationen sind möglich (keine Einschränkung nach Studienrichtung).</div>
 			</td>
 			<td>
 				<div>
-					<input type="checkbox" id="Architekturfotografie" name="Kategorie" value="Architekturfotografie">
+					<input type="checkbox" id="Architekturfotografie" name="Kategorie" value="Architekturfotografie" required>
 					<label for="Architekturfotografie">Architekturfotografie</label><br>
 					
 										
@@ -140,10 +141,10 @@
 					<label for="Film">Film</label><br>
 		
 					<input type="checkbox" id="JournalistischeFotografie" name="Kategorie" value="Journalistische Fotografie"> 
-					<label for="Bildjournalismus">Journalistische Fotografie</label><br>
+					<label for="JournalistischeFotografie">Journalistische Fotografie</label><br>
 					
 					<input type="checkbox" id="Landschaftsfotografie" name="Kategorie" value="Landschaftsfotografie"> 
-					<label for="Dokumentarfotografie">Landschaftsfotografie</label><br>
+					<label for="Landschaftsfotografie">Landschaftsfotografie</label><br>
 
 					<input type="checkbox" id="Modefotografie" name="Kategorie" value="Modefotografie">
 					<label for="Modefotografie">Modefotografie</label><br>
@@ -165,6 +166,9 @@
 					<input type="checkbox" id="Produktdesign" name="Kategorie" value="Produktdesign"> 
 					<label for="Produktdesign">Produktdesign</label><br>
 					
+					<input type="checkbox" id="ServiceDesign" name="Kategorie" value="Service Design"> 
+					<label for="ServiceDesign">Service Design</label><br>
+					
 					<input type="checkbox" id="TransportationDesign" name="Kategorie" value="Transportation Design"> 
 					<label for="TransportationDesign">Transportation Design</label>	
 				</div>
@@ -172,18 +176,15 @@
 				<div>
 					<input type="checkbox" id="CorporateDesign_Branding" name="Kategorie" value="Corporate Design / Branding"> 
 					<label for="CorporateDesign_Branding">Corporate Design / Branding</label><br>
-		
+					
+					<input type="checkbox" id="Editorial Design" name="Kategorie" value="Editorial Design"> 
+					<label for="Editorial Design">Editorial Design</label><br>
+					
 					<input type="checkbox" id="Illustration" name="Kategorie" value="Illustration"> 
 					<label for="Illustration">Illustration</label><br>
 					
 					<input type="checkbox" id="InteractionDesign" name="Kategorie" value="Interaction Design"> 
 					<label for="InteractionDesign">Interaction Design</label><br>
-					
-					<input type="checkbox" id="Motion" name="Kategorie" value="Motion"> 
-					<label for="Motion">Motion Design</label><br>
-		
-					<input type="checkbox" id="Szenografie" name="Kategorie" value="Szenografie"> 
-					<label for="Szenografie">Szenografie</label><br>
 					
 					<input type="checkbox" id="Typografie" name="Kategorie" value="Typografie"> 
 					<label for="Typografie">Typografie</label><br>
@@ -227,7 +228,7 @@
 		</tr>
 
 		<tr>
-			<td>Kleines Vorschaubild der Arbeit * <div class="Hilfetext">Dieses Vorschaubild ist der "Lockvogel" Ihrer Arbeit auf der Startseite. (JPG oder PNG, 120x80 Pixel)</div></td>
+			<td>Kleines Vorschaubild der Arbeit * <div class="Hilfetext">Dieses Vorschaubild ist der "Lockvogel" Ihrer Arbeit auf der Startseite. (JPG oder PNG, 600x450 Pixel, 72 dpi)</div></td>
 			<td><input type="file" required></td>
 		</tr>
 		
