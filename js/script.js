@@ -1,6 +1,9 @@
 //@codekit-prepend "fitText.js";
 //@codekit-prepend "riseToolbar.js"; 
 
+var Abdecker_modus = readCookie('Abdecker');
+console.log(Abdecker_modus);
+
 /*
 	Variable definieren, die von Breite des Browserfensters abhänig ist
 	ab Browserfenster-Breite des iPad horizontal soll beim Einstellen der Filter
@@ -17,20 +20,57 @@ function browserBreite(){
 	console.log(Filterausblenden);
 }
 
+// beim Resizing des Browserfenster soll auch Breite abgefragt werden
 $(window).resize(function() {
     browserBreite();
 });
+
+// http://www.quirksmode.org/js/cookies.html#script
+function createCookie(name,value,days) {
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime()+(days*24*60*60*1000));
+        var expires = "; expires="+date.toGMTString();
+    }
+    else var expires = "";
+    document.cookie = name+"="+value+expires+"; path=/";
+}
+
+function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
 
 $(function(){
 	// legt Variable fest, die das Verhalten des Filtermenüs beeinflusst
 	browserBreite(); 
 	
-	// Schrift via FitText anpassen
-	$("#abdecker").fitText(3, { minFontSize: '16px', maxFontSize: '50px' });
+	// wenn Abdecker in der Session schon mal weggeklickt wurde
+	// soll dieser nicht wieder auftauchen
+	// Abfrage via Cookie "Abdecker"
+	if (Abdecker_modus == 'weggeklickt'){
+		$('#abdecker').hide();
+	} else {
+		// Schrift via FitText anpassen
+		$("#abdecker").fitText(3, { minFontSize: '16px', maxFontSize: '50px' });
+	}
 	
 	// Abdecker unsichtbar machen
 	$('#abdecker').click(function(){
 		$(this).addClass('weg');
+		
+		/*
+			Cookie erzeugen, das verhindert, dass jedesmal der Abdecker sichtbar wird
+			momentan so eingestellt, dass Abdecker wieder auftaucht
+			wenn dazwischen Browser geschlossen wurde
+		*/
+		createCookie('Abdecker','weggeklickt',0);
 	});
 	
 	// Filter-Sachen sollen erst mal unsichtbar sein
