@@ -1,7 +1,30 @@
 //@codekit-prepend "fitText.js";
 //@codekit-prepend "riseToolbar.js"; 
 
+/*
+	Variable definieren, die von Breite des Browserfensters abhänig ist
+	ab Browserfenster-Breite des iPad horizontal soll beim Einstellen der Filter
+	das Filtermenü unsichtbar gemacht werden, sobald man einen Filter auswählt,
+	weil man sonst zu wenig Platz hat
+*/
+var Filterausblenden; // globale Variable!
+function browserBreite(){
+	if (document.documentElement.clientWidth < 1024) {
+		Filterausblenden = 1;
+	} else {
+		Filterausblenden = 0;
+	}
+	console.log(Filterausblenden);
+}
+
+$(window).resize(function() {
+    browserBreite();
+});
+
 $(function(){
+	// legt Variable fest, die das Verhalten des Filtermenüs beeinflusst
+	browserBreite(); 
+	
 	// Schrift via FitText anpassen
 	$("#abdecker").fitText(3, { minFontSize: '16px', maxFontSize: '50px' });
 	
@@ -14,13 +37,10 @@ $(function(){
 	$('#filter').hide();
 	$('#filterbutton').click(function(){
 		if ($('#filter').hasClass('offen')){
-			$('#filter')
-				.slideUp('slow')
-				.removeClass('offen');
+				Filtersichtbarkeit('unsichtbar');
 		} else {
 			$('#filter')
-				.addClass('offen')
-				.slideDown('slow');
+				Filtersichtbarkeit('sichtbar');
 		}
 	});
 	
@@ -55,6 +75,11 @@ $(function(){
 			$(this).addClass('ausgewaehlt');
 			var clicktext = $(this).text();
 			Bilderausblenden(clicktext);
+		}
+		
+		// wenn Browserfensterbreite < 1024, soll Filtermenü gleich ausgeblendet werden
+		if (Filterausblenden == 1){
+			Filtersichtbarkeit('unsichtbar');
 		}
 		
 		Filtersymbol();
@@ -109,6 +134,19 @@ function Bildereinblenden(clicktext){
 	
 	$(einblenden_1).fadeIn(1000);
 	$(einblenden_2).fadeIn(1000);
+}
+
+// Filter-Auswahlliste ein-/ausblenden
+function Filtersichtbarkeit(wie){
+	if(wie == 'unsichtbar'){
+		$('#filter')
+			.slideUp('slow')
+			.removeClass('offen');
+	} else {
+		$('#filter')
+			.addClass('offen')
+			.slideDown('slow');
+	}
 }
 
 // Filter-Button bekommt Warnsymbol, wenn Filter aktiviert sind
