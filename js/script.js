@@ -26,10 +26,10 @@ $(window).resize(function() {
 });
 
 // http://www.quirksmode.org/js/cookies.html#script
-function createCookie(name,value,days) {
-    if (days) {
+function createCookie(name,value,mins) {
+    if (mins) {
         var date = new Date();
-        date.setTime(date.getTime()+(days*24*60*60*1000));
+        date.setTime(date.getTime()+(mins*60*1000));
         var expires = "; expires="+date.toGMTString();
     }
     else var expires = "";
@@ -67,10 +67,8 @@ $(function(){
 		
 		/*
 			Cookie erzeugen, das verhindert, dass jedesmal der Abdecker sichtbar wird
-			momentan so eingestellt, dass Abdecker wieder auftaucht
-			wenn dazwischen Browser geschlossen wurde
-		*/
-		createCookie('Abdecker','weggeklickt',0);
+			momentan so eingestellt, dass Abdecker nach 10min wieder auftaucht	*/
+		createCookie('Abdecker','weggeklickt',10);
 	});
 	
 	// Filter-Sachen sollen erst mal unsichtbar sein

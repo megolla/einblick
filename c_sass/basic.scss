@@ -17,7 +17,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-family: Impact,Tahoma,Arial,Sans-Serif;
+	font-family: "einblick",Impact,Tahoma,Arial,Sans-Serif;
 	font-size: 250%;
 	text-transform: uppercase;
 }
@@ -221,15 +221,15 @@ nav {
 }
 
 #abdecker {
-	font-family: Impact,Tahoma,Arial,Sans-Serif;
+	background: rgba(255,255,255,.8) url("../p/abdecker/wolpertinger.png") no-repeat 50% 50%;
+	font-family: "einblick",Impact,Tahoma,Arial,Sans-Serif;
 	text-transform: uppercase;
-	background: rgba(0,0,0,.8);
-	color: #fff;
+	color: #000;
 	width: 94%;
 	position: fixed;
 	z-index: 1000;
-	left:1em;
-	top: .5em;
+	left:.4em;
+	top: .3em;
 	bottom: 0;
 	@include Box;
 	padding: .2em 0;
@@ -243,14 +243,10 @@ nav {
 	
 	p {
 		width: 100%;
-		font-size: 400%;
+		font-size: 550%;
 		@include Box;
 		padding: 0 0 0 .1em;
 		line-height: 1;
-		white-space: nowrap;
-	    overflow: hidden;
-	    text-overflow: ellipsis;
-		@include OutlineText($Rahmen: #fff);
 	}
 }
 
