@@ -1,4 +1,4 @@
-$myFont: 100%/1.5 'ff-meta-web-pro',Constantia,Palatino,Georgia,Times,Serif;
+$myFont: 90%/1.5 "source-sans-pro",Arial,Sans-Serif;
 
 html {
     overflow-y:scroll;
@@ -14,12 +14,6 @@ body {
 
 h1, h2, h3, h4, h5, h6 { 
 	text-rendering: optimizeLegibility; 
-}
-
-h1 {
-	font-family: "einblick",Impact,Tahoma,Arial,Sans-Serif;
-	font-size: 250%;
-	text-transform: uppercase;
 }
 
 a {
@@ -43,6 +37,11 @@ ol {list-style-type: decimal;}
 
 #content {
 	@include Clearfix;
+	margin-top: 7em;
+}
+
+.projekt #content {
+	margin-top: 2.3em;
 }
 
 footer {
@@ -57,93 +56,131 @@ footer {
 }
 
 header {
+	padding: .5em 0;
+	position: fixed;
+	z-index: 10000;
+	left:0;
+	top: 1em;
+	background: #fff;
+	width:100%;
+	text-transform: uppercase;
+	
 	a {
 		border-bottom: none;
 	}
 	
 	ul {
-		font-size: 80%;
-		width: 6em;
 		list-style-type: none;
-		position: absolute;
-		top: 0;
-		right: 1em;
-		overflow: auto;
 	}
 	
-	li {
-		float:right;
-		padding: .3em .4em;
-		text-align: right;
-	}
-	
-	.current:before {
-		content: "✓";
-		padding-right: .4em;
+	div {
+		position: relative;
 	}
 }
 
-nav {
-	width: 15em;
-	margin-top: -.6em;
-	
+/* das Einblick-Logo mit Spezialfont */
+#logo {
+	font-family: "einblick",Impact,Tahoma,Arial,Sans-Serif;
+	font-size: 250%;
+}
+
+#logo a {
+	border-bottom: none;
+}
+
+.debug #logo {
+	outline: 1px dotted #ccc;
+}
+
+nav {	
 	a {
-		border-bottom: none;
+		display: block;
+		width: 100%;
 	}
 	
 	.current {
-		font-weight: bold;
+		border-bottom: 1px solid;
+	}
+
+	li {
+		width: 32%;
+		float:left;
+		position: relative;
 	}
 	
+	#suchbereich {
+		text-transform: none;
+		background: #fff;
+		position: absolute;
+		left:0;
+		top:1.3em;
+		width: 100%;
+		padding: 3em 1em 3em 0;
+		input {
+			width: 100%;
+			@include Abgerundet(8px);
+			border: 1px solid #ccc;
+			margin-bottom: 1.5em;
+		}
+	}
+}
+
+/* Navi ist auf den Projektseiten unsichtbar! oder? */
+.projekt header {
+	background: transparent;
+	nav, #sprachwahl {
+		display: none;
+	}
+}
+
+#sprachwahl {
+	width: 15em;
+	position: absolute;
+	right: .9em;
+	top: 1.3em;
+	
+	li {
+		float: right;
+		width: 2em;
+		text-align: center;
+	}
+	
+	.current a {
+		border-bottom: 1px solid;
+	}
+	
+}
+
+.debug a {
+	outline: 1px solid blue;
+}
+
+#filter {
+	a {
+		border-bottom: none;
+	}
 	ul {
 		list-style-type: none;
-		//margin-bottom: 1em;
 	}
-	
-	ul#hauptmenu {
-		//outline: 1px solid #ccc;
-		position: relative;
-		left: -.7em;
-		width: 20em;
-		@include Clearfix;
-		
-		li {
-			width: 32%;
-			float:right;
-			
-			a:after {
-				content: "//";
-				margin-left: .5em;
-			}
-		}
-		
-		li:nth-of-type(1){
-			a:after {
-				content: "";
-				margin-left: 0;
-			}
-		}
-	}
-	
 	ul ul {
-		border-style: solid;
-		border-color: #ddd;
-		border-width: 0 0 0 1px;
-		margin-bottom: 0;
-		margin-left: .5em;
+		margin-left: .8em;
 	}
 	
 	ul ul li {
 		padding-left: .3em;
 	}
 	
-	.haupt:after {
-		content: "▼";
-		font-size: 50%;
+	.haupt {
 		position: relative;
-		top: 0;
-		left: 5px;
-		color: #9a9a9a;
+	}
+	
+	.haupt:before {
+		content: "↓";
+		font-size: 70%;
+		position: absolute;
+		top: 2px;
+		left: -9px;
+		color: #747474;
 	}
 	
 	.abstand {
@@ -160,12 +197,6 @@ nav {
 		//padding: .2em;
 	}
 	
-	input {
-		width: 100%;
-		@include Abgerundet(8px);
-		border: 1px solid #ccc;
-	}
-	
 	#filterbutton {
 		cursor: pointer;
 		margin-top: -.3em;
@@ -177,18 +208,23 @@ nav {
 	}
 }
 
+/* der zurückbutton */
+#zurueck {
+	position: fixed;
+	top: 7em;
+	a {
+		border-bottom: none;
+	}
+}
+
 .bilderGalerie {
 	list-style-type: none;
 	
 	li {
 		width:46%;
 		//width:100%;
-		margin: 0 .6em .6em 0;
+		margin: 0 .8em 1.3em 0;
 		float:left;
-		background: rgba(0,0,0,.1);
-		border: 1px solid rgba(0,0,0,.1);
-		//@include Transition($time: .2s);
-		box-shadow: 0 0 2px 2px rgba(0,0,0,.06);
 	}
 	
 	li:hover,
@@ -204,16 +240,13 @@ nav {
 	img {
 		width: 100%;
 		height: auto;
+		border: 1px solid rgba(0,0,0,.1);
 	}
 	
 	figcaption {
 		display: block;
-		text-align: center;
-		line-height: 1;
-		font-size: 80%;
-		position: relative;
-		top: -.3em;
-		padding: .1em;
+		line-height: 1.2;
+		font-size: 90%;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -225,11 +258,11 @@ nav {
 	font-family: "einblick",Impact,Tahoma,Arial,Sans-Serif;
 	text-transform: uppercase;
 	color: #000;
-	width: 94%;
+	width: 99%;
 	position: fixed;
-	z-index: 1000;
+	z-index: 10000000;
 	left:.4em;
-	top: .3em;
+	top: 0;
 	bottom: 0;
 	@include Box;
 	padding: .2em 0;
@@ -298,8 +331,10 @@ article {
 
 // Bildergalerie auf der Projektseite
 .projektbilder {
+	list-style-type: none;
+	margin-bottom: 1.5em;
 	img {
-		width: 100%;
+		width: 98%;
 		height: auto;
 	}
 	

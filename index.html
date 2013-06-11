@@ -16,7 +16,7 @@
 <script type="text/javascript" src="//use.typekit.net/qbo8eji.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
-<link rel="stylesheet" href="c/style.css?v=1.2" />
+<link rel="stylesheet" href="c/style.css?v=1.3" />
 <link rel="stylesheet" media="print" href="c/print.css" />
 
 <!--[if IE]>
@@ -24,34 +24,52 @@
 <![endif]-->
 
 </head>
-<body>
 
-<div id="wrap">
+<!-- hat body die Klasse "debug" werden viele outlines sichtbar! -->
+<body class="debugX">
 
 <aside id="abdecker">
-<p>Einblicke</p>
+<p>Einblick</p>
 <p>Bachelor</p>
 <p>Master</p>
 <p>Ausstellung</p>
 </aside>
 
 <header>
-<h1>einblick</h1>
+
+<div>
+
+<h1 id="logo"><a href="#wrap">Einblick</a></h1>
+
+<nav>
 <ul>
-<li><a href="#wrap">en</a></li>
-<li class="current"><a href="#wrap">de</a></li>
+<li><a href="#wrap">Information</a></li>
+<li><a href="#wrap">Ausstellung</a></li>
+<li><a href="#wrap" id="suchen">Suchen</a>
+
+<div id="suchbereich">
+<form>
+<p>Schlagwort suchen:</p>
+<input type="search" placeholder="Schlagwort">
+<p>Namen suchen:</p>
+<input type="search" placeholder="Name">
+</form>
+</div>
+
+</li>
 </ul>
+</nav>
+
+<ul id="sprachwahl">
+<li class="current"><a href="#wrap">de</a></li>
+<li><a href="#wrap">en</a></li>
+</ul>
+
+</div>
 
 </header>
 
-<nav>
-<ul id="hauptmenu">
-<li><a href="#wrap">Ausstellung</a></li>
-<li><a href="#wrap">Über uns</a></li>
-<li class="current"><a href="#wrap">Arbeiten</a></li>
-</ul>
-
-<img id="filterbutton" src="assets/filter.gif" alt="filter" width="21" height="36">
+<div id="wrap">
 
 <!-- filter-->
 <div id="filter">
@@ -111,11 +129,7 @@
 <li class="abstand"><a href="#wrap" id="filterZurueckSetzen">Filter zurücksetzen</a></li>
 </ul>
 
-<input type="search" placeholder="Schlagwort"> <br>
-<input type="search" placeholder="Name">
 </div><!-- /filter -->
-
-</nav>
 
 <section id="content">
 
@@ -125,16 +139,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/kd_05.jpg" alt="kd_03" width="250" height="142">
-<figcaption>Denise Aebischer Trebo/2013 und noch mehr Text und noch mehr Text</figcaption>
-</figure>
-</a>	
-</li>
-
-<li class="kd">
-<a href="projekt.html" title="zum Demo-Projekt">
-<figure>
-<img src="p/kd_06.jpg" alt="kd_06" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Denise Aebischer Trebo<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -143,7 +148,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/id_03.jpg" alt="id_03" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>
 </li>
@@ -152,7 +157,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/fd_06.jpg" alt="fd_06" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -161,7 +166,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/id_06.jpg" alt="id_06" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>
 </li>
@@ -170,7 +175,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/fd_01.jpg" alt="fd_01" width="250" height="142">
-<figcaption>Denise Aebischer Trebo/2013 und noch mehr Text und noch mehr Text</figcaption>
+<figcaption>Denise Aebischer Trebo<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -179,7 +184,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/kd_03.jpg" alt="kd_03" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -188,7 +193,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/kd_02.jpg" alt="kd_03" width="250" height="142">
-<figcaption>Denise Aebischer Trebo/2013 und noch mehr Text</figcaption>
+<figcaption>Denise Aebischer Trebo<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -197,7 +202,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/fd_05.jpg" alt="fd_05" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -206,7 +211,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/id_07.jpg" alt="id_07" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>
 </li>
@@ -215,7 +220,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/kd_09.jpg" alt="kd_08" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -224,7 +229,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/id_09.jpg" alt="kd_10" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -233,7 +238,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/id_06.jpg" alt="id_07" width="250" height="142">
-<figcaption>Denise Aebischer Trebo/2013 und noch mehr Text</figcaption>
+<figcaption>Denise Aebischer Trebo<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -242,7 +247,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/fd_06.jpg" alt="fd_01" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -251,7 +256,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/fd_07.jpg" alt="fd_07" width="250" height="142">
-<figcaption>Denise Aebischer Trebo/2013 und noch mehr Text und noch mehr Text</figcaption>
+<figcaption>Denise Aebischer Trebo<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -260,7 +265,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/id_05.jpg" alt="id_05" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -269,7 +274,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/kd_04.jpg" alt="kd_03" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>
 </li>
@@ -278,7 +283,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/id_05.jpg" alt="id_05" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -287,7 +292,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/fd_07.jpg" alt="fd_07" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -296,7 +301,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/kd_10.jpg" alt="kd_10" width="250" height="142">
-<figcaption>Denise Aebischer Trebo/2013 und noch mehr Text</figcaption>
+<figcaption>Denise Aebischer Trebo<br>2013</figcaption>
 </figure>
 </a>
 </li>
@@ -305,7 +310,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/kd_05.jpg" alt="kd_03" width="250" height="142">
-<figcaption>Denise Aebischer Trebo/2013 und noch mehr Text und noch mehr Text</figcaption>
+<figcaption>Denise Aebischer Trebo<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -314,7 +319,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/kd_06.jpg" alt="kd_06" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -323,7 +328,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/id_03.jpg" alt="id_03" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>
 </li>
@@ -332,7 +337,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/fd_06.jpg" alt="fd_06" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -341,7 +346,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/id_06.jpg" alt="id_06" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>
 </li>
@@ -350,7 +355,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/fd_01.jpg" alt="fd_01" width="250" height="142">
-<figcaption>Denise Aebischer Trebo/2013 und noch mehr Text und noch mehr Text</figcaption>
+<figcaption>Denise Aebischer Trebo<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -359,7 +364,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/kd_03.jpg" alt="kd_03" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -368,7 +373,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/kd_02.jpg" alt="kd_03" width="250" height="142">
-<figcaption>Denise Aebischer Trebo/2013 und noch mehr Text</figcaption>
+<figcaption>Denise Aebischer Trebo<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -377,7 +382,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/fd_05.jpg" alt="fd_05" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -386,7 +391,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/id_07.jpg" alt="id_07" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>
 </li>
@@ -395,7 +400,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/kd_09.jpg" alt="kd_08" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -404,7 +409,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/id_09.jpg" alt="kd_10" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -413,7 +418,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/id_06.jpg" alt="id_07" width="250" height="142">
-<figcaption>Denise Aebischer Trebo/2013 und noch mehr Text</figcaption>
+<figcaption>Denise Aebischer Trebo<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -422,7 +427,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/fd_06.jpg" alt="fd_01" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -431,7 +436,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/fd_07.jpg" alt="fd_07" width="250" height="142">
-<figcaption>Denise Aebischer Trebo/2013 und noch mehr Text und noch mehr Text</figcaption>
+<figcaption>Denise Aebischer Trebo<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -440,7 +445,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/id_05.jpg" alt="id_05" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -449,7 +454,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/kd_04.jpg" alt="kd_03" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>
 </li>
@@ -458,7 +463,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/id_05.jpg" alt="id_05" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -467,7 +472,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/fd_07.jpg" alt="fd_07" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -476,7 +481,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/kd_10.jpg" alt="kd_10" width="250" height="142">
-<figcaption>Denise Aebischer Trebo/2013 und noch mehr Text</figcaption>
+<figcaption>Denise Aebischer Trebo<br>2013</figcaption>
 </figure>
 </a>
 </li>
@@ -485,7 +490,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/kd_05.jpg" alt="kd_03" width="250" height="142">
-<figcaption>Denise Aebischer Trebo/2013 und noch mehr Text und noch mehr Text</figcaption>
+<figcaption>Denise Aebischer Trebo<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -494,7 +499,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/kd_06.jpg" alt="kd_06" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -503,7 +508,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/id_03.jpg" alt="id_03" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>
 </li>
@@ -512,7 +517,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/fd_06.jpg" alt="fd_06" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -521,7 +526,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/id_06.jpg" alt="id_06" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>
 </li>
@@ -530,7 +535,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/fd_01.jpg" alt="fd_01" width="250" height="142">
-<figcaption>Denise Aebischer Trebo/2013 und noch mehr Text und noch mehr Text</figcaption>
+<figcaption>Denise Aebischer Trebo<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -539,7 +544,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/kd_03.jpg" alt="kd_03" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -548,7 +553,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/kd_02.jpg" alt="kd_03" width="250" height="142">
-<figcaption>Denise Aebischer Trebo/2013 und noch mehr Text</figcaption>
+<figcaption>Denise Aebischer Trebo<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -557,7 +562,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/fd_05.jpg" alt="fd_05" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -566,7 +571,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/id_07.jpg" alt="id_07" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>
 </li>
@@ -575,7 +580,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/kd_09.jpg" alt="kd_08" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -584,7 +589,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/id_09.jpg" alt="kd_10" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -593,7 +598,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/id_06.jpg" alt="id_07" width="250" height="142">
-<figcaption>Denise Aebischer Trebo/2013 und noch mehr Text</figcaption>
+<figcaption>Denise Aebischer Trebo<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -602,7 +607,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/fd_06.jpg" alt="fd_01" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -611,7 +616,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/fd_07.jpg" alt="fd_07" width="250" height="142">
-<figcaption>Denise Aebischer Trebo/2013 und noch mehr Text und noch mehr Text</figcaption>
+<figcaption>Denise Aebischer Trebo<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -620,7 +625,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/id_05.jpg" alt="id_05" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -629,7 +634,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/kd_04.jpg" alt="kd_03" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>
 </li>
@@ -638,7 +643,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/id_05.jpg" alt="id_05" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -647,7 +652,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/fd_07.jpg" alt="fd_07" width="250" height="142">
-<figcaption>Maximilian Mustermannhofer/2013 und noch mehr Text</figcaption>
+<figcaption>Maximilian Mustermannhofer<br>2013</figcaption>
 </figure>
 </a>	
 </li>
@@ -656,7 +661,7 @@
 <a href="projekt.html" title="zum Demo-Projekt">
 <figure>
 <img src="p/kd_10.jpg" alt="kd_10" width="250" height="142">
-<figcaption>Denise Aebischer Trebo/2013 und noch mehr Text</figcaption>
+<figcaption>Denise Aebischer Trebo<br>2013</figcaption>
 </figure>
 </a>
 </li>
@@ -671,7 +676,7 @@
 
 <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
 <script>!window.jQuery && document.write('<script src="js/jquery-1.10.0.min.js"><\/script>')</script>
-<script src="js/script-ck.js?v=1.2"></script>
+<script src="js/script-ck.js?v=1.3"></script>
 
 </body>
 </html>

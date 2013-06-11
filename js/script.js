@@ -58,7 +58,7 @@ $(function(){
 		$('#abdecker').hide();
 	} else {
 		// Schrift via FitText anpassen
-		$("#abdecker").fitText(3, { minFontSize: '16px', maxFontSize: '50px' });
+		$("#abdecker").fitText(3, { minFontSize: '16px', maxFontSize: '30px' });
 	}
 	
 	// Abdecker unsichtbar machen
@@ -71,24 +71,11 @@ $(function(){
 		createCookie('Abdecker','weggeklickt',10);
 	});
 	
-	// Filter-Sachen sollen erst mal unsichtbar sein
-	$('#filter').hide();
-	$('#filterbutton').click(function(){
-		if ($('#filter').hasClass('offen')){
-				Filtersichtbarkeit('unsichtbar');
-		} else {
-			$('#filter')
-				Filtersichtbarkeit('sichtbar');
-		}
-	});
-	
-	Filtersymbol();
-	
 	// Filter bei Jahrgang, Studienrichtung & kategorie erst mal unsichtbar
-	$('nav ul ul').hide();
-	$('nav .haupt').click(function(){
+	$('#filter ul ul').hide();
+	$('#filter .haupt').click(function(){
 	
-		$('nav ul ul').not('offen').slideUp('slow');
+		$('#filter ul ul').not('offen').slideUp('slow');
 	
 		var ele = $(this).next('ul');
 		if (ele.hasClass('offen')){
@@ -104,7 +91,7 @@ $(function(){
 	});
 	
 	// Filter werden als ausgewählt oder nicht ausgewählt markiert
-	$('nav ul ul li').click(function(){
+	$('#filter ul ul li').click(function(){
 		if ($(this).hasClass('ausgewaehlt')){
 			$(this).removeClass('ausgewaehlt');
 			var clicktext = $(this).text();
@@ -120,21 +107,30 @@ $(function(){
 			Filtersichtbarkeit('unsichtbar');
 		}
 		
-		Filtersymbol();
-		
 		return false;
 	});
 	
 	// alle Filter zurücksetzen
 	$('#filterZurueckSetzen').click(function(){
-		$('nav li.ausgewaehlt').removeClass('ausgewaehlt');
+		$('#filter li.ausgewaehlt').removeClass('ausgewaehlt');
 		
 		$('.bilderGalerie .fd').fadeIn(1000);
 		$('.bilderGalerie .id').fadeIn(1000);
 		$('.bilderGalerie .kd').fadeIn(1000);
 		
-		Filtersymbol();
-		
+		return false;
+	});
+	
+	// Suchfelder unsichtbarmachen und zeigen
+	$('#suchbereich').hide();
+	var sucheSichtbar;
+	$('#suchen').click(function(){
+		if (sucheSichtbar == 1){
+			$('#suchbereich').slideUp('fast');
+		} else {
+			$('#suchbereich').slideDown('fast');
+		}
+		sucheSichtbar = !sucheSichtbar;
 		return false;
 	});
 });
@@ -184,15 +180,6 @@ function Filtersichtbarkeit(wie){
 		$('#filter')
 			.addClass('offen')
 			.slideDown('slow');
-	}
-}
-
-// Filter-Button bekommt Warnsymbol, wenn Filter aktiviert sind
-function Filtersymbol(){
-	if ($('nav ul ul li').hasClass('ausgewaehlt')){
-		$('#filterbutton').attr({src: 'assets/filter_warnung.gif'});
-	} else {
-		$('#filterbutton').attr({src: 'assets/filter.gif'});
 	}
 }
 

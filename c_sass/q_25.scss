@@ -3,11 +3,3 @@
 .projekttext {
 	@include Mehrspaltig_FixBreite;
 }
-
-.bilderGalerie {
-	list-style-type: none;
-	
-	li {
-		width:46%;
-	}
-}
