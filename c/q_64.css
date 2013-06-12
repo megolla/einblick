@@ -1,0 +1,57 @@
+/* Stylesheet ab 64em (ca. 1024px) Breite */
+/* #wrap und header div müssen gleiche Breite usw. haben! */
+#wrap {
+  margin: 0 auto;
+  max-width: 90em;
+  width: 96%; }
+
+.debug #wrap {
+  outline: 1px solid #ccc; }
+
+header div {
+  margin: 0 auto;
+  max-width: 90em;
+  width: 96%; }
+
+.debug header div {
+  outline: 1px solid orange; }
+
+/* #logo und #filter müssen gleiche Breite usw. haben! */
+#logo {
+  width: 20%;
+  float: left; }
+
+#filter {
+  width: 20%;
+  float: left;
+  margin-top: 7em; }
+
+/* nav und #content müssen gleiche Breite usw. haben! */
+nav {
+  width: 78%;
+  float: right;
+  margin-top: 1.3em; }
+  nav li {
+    width: 31.7%;
+    margin-right: .9em;
+    float: left; }
+
+.debug nav {
+  outline: 1px solid orange; }
+  .debug nav li {
+    outline: 1px solid red; }
+
+#content {
+  width: 78%;
+  float: right; }
+
+.debug #content {
+  outline: 1px solid green; }
+
+.bilderGalerie li {
+  width: 31.7%;
+  margin-right: .9em; }
+
+article h1.projekttitel {
+  text-align: left;
+  margin-bottom: 0; }

@@ -1,7 +1,3 @@
 /* Stylesheet ab 48em (ca. 768px) Breite */
-
-.bilderGalerie {
-	li {
-		width:31%;
-	}
-}
+.bilderGalerie li {
+  width: 31%; }
