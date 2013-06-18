@@ -1,11 +1,13 @@
 html {
   overflow-y: scroll;
-  -webkit-font-smoothing: antialiased; }
+  }
+  
 
 body {
   background: #fff;
   color: #444;
-  font: 90%/1.5 "source-sans-pro",Times,Arial,Sans-Serif;
+  font: 70%/1.8 "source-sans-pro",Times,Arial,Sans-Serif;
+  letter-spacing: 0.08em;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
@@ -19,6 +21,8 @@ a {
   color: inherit;
   text-decoration: none;
   border-bottom: 1px dotted; }
+  
+strong {font-weight: 600; font-style: normal;}
 
 ul {
   list-style-type: circle; }
@@ -32,7 +36,7 @@ ol {
   position: relative; }
 
 #content {
-  margin-top: 7em; }
+  margin-top: 7em }
 
 #content:before, #content:after {
   content: "";
@@ -56,12 +60,12 @@ footer {
     border-bottom: none; }
 
 header {
-  padding: .5em 0;
+  padding: 0 0;
   position: fixed;
   z-index: 10000;
   left: 0;
   top: 1em;
-  background: #fff;
+  background: url(../assets/headerBalken.gif) repeat-x 0 50%;
   width: 100%;
   text-transform: uppercase; }
   header a {
@@ -74,23 +78,34 @@ header {
 /* das Einblick-Logo mit Spezialfont */
 #logo {
   font-family: "einblick",Impact,Tahoma,Arial,Sans-Serif;
-  font-size: 250%; }
+  font-size: 300%; }
 
 #logo a {
   border-bottom: none; }
 
 .debug #logo {
   outline: 1px dotted #ccc; }
+  
+nav {
+	padding-top: .7em;
+}
 
 nav a {
   display: block;
-  width: 100%; }
+  width: 100%;
+    font-weight:600;font-style: normal; }
 nav .current {
   border-bottom: 1px solid; }
 nav li {
   width: 32%;
   float: left;
-  position: relative; }
+  position: relative;
+}
+
+nav #suche {
+	background: url(../assets/Lupe.gif) no-repeat 3.5em 50%;
+}
+
 nav #suchbereich {
   text-transform: none;
   background: #fff;
@@ -101,8 +116,15 @@ nav #suchbereich {
   padding: 3em 1em 3em 0; }
   nav #suchbereich input {
     width: 100%;
-    border: 1px solid #ccc;
+    border: none;
+    border-bottom: 1px solid #ccc;
     margin-bottom: 1.5em; }
+    
+nav #suchbereich .vorschlaege li {
+	float: none;
+	width: 100%;
+	color: #ccc;
+}
 
 /* Navi ist auf den Projektseiten unsichtbar! oder? */
 .projekt header {
@@ -114,16 +136,26 @@ nav #suchbereich {
   width: 15em;
   position: absolute;
   right: .9em;
-  top: 1.3em; }
+  top: 1.9em; }
   #sprachwahl li {
     float: right;
     width: 2em;
     text-align: center; }
   #sprachwahl .current a {
-    border-bottom: 1px solid; }
+    font-weight: 600; font-style: normal; }
+  #sprachwahl li:last-child:after {
+  	content: "/";
+  	margin-left: .4em;
+  }
 
 .debug a {
   outline: 1px solid blue; }
+  
+#filter {
+	position: relative;
+	left: 1.2em;
+	top: 0.5em;
+}
 
 #filter a {
   border-bottom: none; }
@@ -133,20 +165,30 @@ nav #suchbereich {
   margin-left: .8em; }
 #filter ul ul li {
   padding-left: .3em; }
+#filter ul ul li a {color: #979797;} 
 #filter .haupt {
-  position: relative; }
+  position: relative;
+  font-weight: 600; font-style: normal; }
 #filter .haupt:before {
-  content: "↓";
-  font-size: 70%;
+  content: url(../assets/Pfeilunten.gif);
   position: absolute;
   top: 2px;
-  left: -9px;
-  color: #747474; }
+  left: -13px; }
+#filter .haupt.offen:before {
+	content: url(../assets/Pfeiloben.gif);
+
+}
+#filterZurueckSetzen:before {
+  content: url(../assets/Schliessen.gif);
+  position: absolute;
+  left: -13px; }
+
+  
 #filter .abstand {
-  margin-top: .7em; }
-#filter .ausgewaehlt a:after {
-  content: "✓";
-  padding-left: .4em; }
+  margin-top: 0.7em;
+display: block;   }
+#filter .ausgewaehlt a {
+ color: #444; }
 #filter li a {
   display: block; }
 #filter #filterbutton {
@@ -154,7 +196,8 @@ nav #suchbereich {
   margin-top: -.3em; }
 #filter #filter {
   margin: -2.8em 0 1.5em 23px;
-  font-size: 85%; }
+  font-size: 75%; }
+  #filter .abstand 
 
 /* der zurückbutton */
 #zurueck {
@@ -167,7 +210,7 @@ nav #suchbereich {
   list-style-type: none; }
   .bilderGalerie li {
     width: 46%;
-    margin: 0 .8em 1.3em 0;
+    margin: 1em .8em 1.3em 0;
     float: left; }
   .bilderGalerie li:hover,
   .bilderGalerie li:active {
@@ -184,8 +227,8 @@ nav #suchbereich {
     border: 1px solid rgba(0, 0, 0, 0.1); }
   .bilderGalerie figcaption {
     display: block;
-    line-height: 1.2;
-    font-size: 90%;
+    line-height: 1.5;
+    font-size: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis; }

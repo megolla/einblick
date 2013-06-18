@@ -162,6 +162,13 @@ $(function(){
 	$('#filter .haupt').click(function(){
 	
 		$('#filter ul ul').not('offen').slideUp('slow');
+		
+		// ^ bei Filter umdrehen
+		if ($(this).hasClass('offen')){
+			$(this).removeClass('offen');
+		}else {
+			$(this).addClass('offen');
+		}
 	
 		var ele = $(this).next('ul');
 		if (ele.hasClass('offen')){
@@ -210,7 +217,7 @@ $(function(){
 	// Suchfelder unsichtbarmachen und zeigen
 	$('#suchbereich').hide();
 	var sucheSichtbar;
-	$('#suchen').click(function(){
+	$('#suche').click(function(){
 		if (sucheSichtbar == 1){
 			$('#suchbereich').slideUp('fast');
 		} else {
@@ -268,6 +275,7 @@ function Filtersichtbarkeit(wie){
 			.slideDown('slow');
 	}
 }
+
 
 $(window).load(function() {
 
