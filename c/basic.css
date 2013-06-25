@@ -1,3 +1,22 @@
+.ausstellung aside {border-top: none;}
+
+.ausstellung p {
+	margin-bottom: 1em;
+	border: none;
+}
+
+.ausstellung p:last-child {
+	margin-bottom: 1em;
+	border: none;
+}
+
+
+
+
+
+
+
+
 html {
 	overflow-y: scroll
 }
@@ -5,7 +24,7 @@ html {
 body {
 	background: #fff;
 	color: #444;
-	font: 70%/1.8 "source-sans-pro",Arial,Sans-Serif;
+	font: 70%/1.8 "nimbus-sans",Arial,Sans-Serif;
 	letter-spacing: 0.08em;
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
@@ -108,7 +127,7 @@ header div {
 }
 
 nav {
-	padding-top: .7em
+	padding-top: .55em
 }
 
 nav a {
@@ -119,7 +138,7 @@ nav a {
 }
 
 nav .current {
-	border-bottom: 1px solid
+	color: rgb(0,163,211);
 }
 
 nav li {
@@ -350,7 +369,18 @@ nav #suchbereich .vorschlaege li {
 	line-height: 1
 }
 
-article h1.projekttitel {
+#zurueck {
+	left: 2.5%;
+}
+
+#zurueck:before {
+	content: url(../assets/Pfeillinks.gif);
+	position: absolute;
+	top: -1px;
+	left: -13px;
+}
+
+article h1 {
 	font-weight: 600;
 	font-style: normal;
 	margin-bottom: 1.8em;

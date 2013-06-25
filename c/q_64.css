@@ -2,6 +2,55 @@
 
 /* #wrap und header div müssen gleiche Breite usw. haben! */
 
+.einspaltig {
+	width: 48%;
+	float: left;
+	margin-bottom: 1.8em;
+}
+
+.ausstellung #content {
+	width: 81%;
+	float: right;
+	position: relative;
+}
+
+
+.ausstellungsbild {
+	width:48%;
+	height: auto;
+	margin-bottom: 1.8em;
+}
+
+.lageplan {
+	width:48%;
+	height: auto;
+	margin-bottom: 1.8em;
+}
+
+
+#zurueck {
+	position: relative;
+	top: 6.7em;
+	left: 1em;
+	border-bottom: none;
+}
+
+.ausstellung aside {
+	width: 48%;
+	float: right;
+	margin-top: 17.5em;
+}
+
+.ausstellung article {
+	width: 100%;
+	max-width: 100%;
+	position: static;
+
+}
+
+
+
+
 #wrap {
 	margin: 0 auto;
 	max-width: 110em;
@@ -101,17 +150,11 @@ article h1.projekttitel {
 	outline: 1px solid blue;
 }
 
-article {
+.projekt article {
 	width: 36.5%;
 	max-width: 42em;
 	position: fixed;
 	margin-top: 5.4em;
-}
-
-article #zurueck {
-	position: relative;
-	top: -5.5em;
-	border-bottom: none;
 }
 
 article .mehrspaltig {
