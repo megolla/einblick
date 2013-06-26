@@ -27,13 +27,13 @@
 <link rel="stylesheet" href="c/basic.css" />
 
 <!-- ab ca. 400px -->
-<link rel="stylesheet" media="screen and (min-width: 25em)" href="c/q_25.css" />
+<link rel="stylesheet" media="screen and (min-width: 25em)" href="c/q_25XX.css" />
 
 <!-- ab ca. 768px (iPad Hochformat) -->
-<link rel="stylesheet" media="screen and (min-width: 48em)" href="c/q_48.css" />
+<link rel="stylesheet" media="screen and (min-width: 48em)" href="c/q_48XX.css" />
 
-<!-- ab ca. 1024px (iPad Hochformat) -->
-<link rel="stylesheet" media="screen and (min-width: 64em)" href="c/q_64.css" />
+<!-- desktop -->
+<link rel="stylesheet" media="screen and (min-width: 860px)" href="c/desktop.css" />
 
 <!-- Print-Stylesheet -->
 <link rel="stylesheet" media="print" href="c/print.css" />
@@ -61,9 +61,12 @@
 <h1 id="logo"><a href="#wrap">Einblick</a></h1>
 
 <nav>
-<ul>
-<li><a href="#wrap">Information</a></li>
-<li><a href="#wrap">Ausstellung</a></li>
+
+<a id="menueSchliessen" href="#wrap"><img src="assets/Menue.gif" alt="Menue" width="20" height="14"></a>
+
+<ul id="hauptmenu">
+<li><a href="information.html">Information</a></li>
+<li><a href="ausstellung.html">Ausstellung</a></li>
 <li><a href="#wrap" id="suche">Suche</a>
 <div id="suchbereich">
 <form>
@@ -81,8 +84,8 @@
 
 </div>
 </li>
-<li>
-<ul id="sprachwahl">
+<li id="sprachwahl">
+<ul>
 <li class="current"><a href="#wrap">de</a></li>
 <li><a href="#wrap">en</a></li>
 </ul>
@@ -697,7 +700,9 @@
 
 </section>
 
-<footer><a href="#wrap" title=''>Impressum</a> | <a href="eingabe_formular/index.html" title=''>Login</a> | <a href="#wrap" title=''>nach oben scrollen</a></footer>
+<footer>
+<div><a href="#wrap" title=''>Impressum</a> | <a href="eingabe_formular/index.html" title=''>Login</a> | <a href="#wrap" title=''>nach oben scrollen</a></div>
+</footer>
 
 </div><!-- /wrap -->
 

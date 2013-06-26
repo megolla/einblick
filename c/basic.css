@@ -1,22 +1,3 @@
-.ausstellung aside {border-top: none;}
-
-.ausstellung p {
-	margin-bottom: 1em;
-	border: none;
-}
-
-.ausstellung p:last-child {
-	margin-bottom: 1em;
-	border: none;
-}
-
-
-
-
-
-
-
-
 html {
 	overflow-y: scroll
 }
@@ -83,7 +64,6 @@ footer {
 	clear: both;
 	margin: 3em 0;
 	padding-top: .5em;
-	border-top: 1px solid #ccc
 }
 
 footer a {
@@ -91,13 +71,6 @@ footer a {
 }
 
 header {
-	padding: 0 0;
-	position: fixed;
-	z-index: 10000;
-	left: 0;
-	top: 1em;
-	background: url(../assets/headerBalken.gif) repeat-x 0 50%;
-	width: 100%;
 	text-transform: uppercase
 }
 
@@ -110,12 +83,13 @@ header ul {
 }
 
 header div {
-	position: relative
+	position: relative;
 }
 
 #logo {
 	font-family: "einblick",Impact,Tahoma,Arial,Sans-Serif;
-	font-size: 300%
+	font-size: 300%;
+	text-align: center;
 }
 
 #logo a {
@@ -127,28 +101,42 @@ header div {
 }
 
 nav {
-	padding-top: .55em
+	background: #444;
+	position: fixed;
+	width:90%;
+	top:0;
+	bottom:0;
+	left:0;
+	z-index: 100;
+}
+
+/* button zum Schliessen des Menues */
+nav #menueSchliessen {
+	margin: 1em;
+}
+
+nav #hauptmenu {
+	margin: 3em 1em;
+}
+
+nav li {
+	position: relative;
 }
 
 nav a {
 	display: block;
 	width: 100%;
 	font-weight: 600;
-	font-style: normal
+	font-style: normal;
+	color: #fff;
 }
 
-nav .current {
+nav .current a {
 	color: rgb(0,163,211);
 }
 
-nav li {
-	width: 32%;
-	float: left;
-	position: relative
-}
-
 nav #suche {
-	background: url(../assets/Lupe.gif) no-repeat 3.5em 50%
+	background: url(../assets/Lupe_schwarz.gif) no-repeat 3.8em 50%
 }
 
 nav #suchbereich {
@@ -158,14 +146,22 @@ nav #suchbereich {
 	left: 0;
 	top: 1.3em;
 	width: 100%;
-	padding: 3em 1em 3em 0
+	min-height: 22em;
+	padding: 4em 1em 3em 0;
+	z-index: 1000;
 }
 
 nav #suchbereich input {
 	width: 100%;
 	border: none;
+	/* 
+	nächste 2 Zeilen machen runde Suchfelder bei Webkit weg
+	aber das Padding bleibt leider!
+	*/
+	/* -webkit-appearance: none;
+	border-radius: none;*/
 	border-bottom: 1px solid #ccc;
-	margin-bottom: 1.5em
+	margin-bottom: 1.5em;
 }
 
 nav #suchbereich .vorschlaege li {
@@ -175,28 +171,17 @@ nav #suchbereich .vorschlaege li {
 }
 
 #sprachwahl {
-	margin-right: 2%
+	width:30%;
+	position: absolute;
+	right: 5%;
+	top:5%;
+	z-index: 50;
 }
 
 #sprachwahl li {
 	float: right;
-	width: 2.2em;
-	text-align: right;
-	margin-right: 0;
-	border-bottom: none;
 }
-
-#sprachwahl li a {
-	border-bottom: none;
-	color: #ccc
-}
-
-#sprachwahl .current a {
-	font-weight: 600;
-	font-style: normal;
-	color: #444;
-}
-
+	
 #sprachwahl li:first-child a:before {
 	content: "/";
 	margin: 0 .4em
@@ -209,11 +194,14 @@ nav #suchbereich .vorschlaege li {
 #filter {
 	position: relative;
 	left: 1.2em;
-	top: 0.5em
+	top: 0.5em;
+	background: #444;
+	padding-left: 3em;
 }
 
 #filter a {
-	border-bottom: none
+	border-bottom: none;
+	color: white;
 }
 
 #filter ul {
@@ -229,7 +217,7 @@ nav #suchbereich .vorschlaege li {
 }
 
 #filter ul ul li a {
-	color: #979797
+	color: #979797;
 }
 
 #filter .haupt {
@@ -242,7 +230,7 @@ nav #suchbereich .vorschlaege li {
 	content: url(../assets/Pfeilunten.gif);
 	position: absolute;
 	top: 2px;
-	left: -13px
+	left: -13px;
 }
 
 #filter .haupt.offen:before {
@@ -252,7 +240,7 @@ nav #suchbereich .vorschlaege li {
 #filterZurueckSetzen:before {
 	content: url(../assets/Schliessen.gif);
 	position: absolute;
-	left: -13px
+	left: -13px;
 }
 
 #filter .abstand {
@@ -261,7 +249,7 @@ nav #suchbereich .vorschlaege li {
 }
 
 #filter .ausgewaehlt a {
-	color: #444
+	color: white;
 }
 
 #filter li a {
@@ -278,23 +266,17 @@ nav #suchbereich .vorschlaege li {
 	font-size: 75%
 }
 
-#filter .abstand #zurueck {
-	position: fixed;
-	top: 7em
-}
-
 #zurueck a {
 	border-bottom: none
 }
 
 .bilderGalerie {
-	list-style-type: none
+	list-style-type: none;
 }
 
 .bilderGalerie li {
-	width: 46%;
+	width: 100%;
 	margin: 1em .8em 1.3em 0;
-	float: left
 }
 
 .bilderGalerie li:hover,.bilderGalerie li:active {
@@ -376,11 +358,11 @@ nav #suchbereich .vorschlaege li {
 #zurueck:before {
 	content: url(../assets/Pfeillinks.gif);
 	position: absolute;
-	top: -1px;
+	top: 2px;
 	left: -13px;
 }
 
-article h1 {
+article h1.projekttitel {
 	font-weight: 600;
 	font-style: normal;
 	margin-bottom: 1.8em;

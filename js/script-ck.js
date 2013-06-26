@@ -276,6 +276,15 @@ function Filtersichtbarkeit(wie){
 	}
 }
 
+// button zum Schliessen des Menues
+$(function(){
+	$('nav #menueSchliessen').click(function(){
+		$('nav').hide('fast');
+		return false;
+	});
+});
+
+
 
 $(window).load(function() {
 
