@@ -98,7 +98,7 @@ console.log(Abdecker_modus);
 */
 var Filterausblenden; // globale Variable!
 function browserBreite(){
-	if (document.documentElement.clientWidth < 1024) {
+	if (document.documentElement.clientWidth < 768) {
 		Filterausblenden = 1;
 	} else {
 		Filterausblenden = 0;
@@ -195,7 +195,7 @@ $(function(){
 			Bilderausblenden(clicktext);
 		}
 		
-		// wenn Browserfensterbreite < 1024, soll Filtermenü gleich ausgeblendet werden
+		// wenn Browserfensterbreite < 768, soll Filtermenü gleich ausgeblendet werden
 		if (Filterausblenden == 1){
 			Filtersichtbarkeit('unsichtbar');
 		}
@@ -276,15 +276,42 @@ function Filtersichtbarkeit(wie){
 	}
 }
 
-// button zum Schliessen des Menues
+// Öffnen und Schliessen des Nav und Filter-Menues
 $(function(){
-	$('nav #menueSchliessen').click(function(){
+	
+	EinAusblenden('nav');
+	
+	$('#navMenueOeffnen').click(function(){
+		$('nav').show('fast');
+	});
+	
+	$('#navMenueSchliessen').click(function(){
 		$('nav').hide('fast');
-		return false;
+	});
+	
+	EinAusblenden('#filter');
+	
+	$('#FilterOeffnen').click(function(){
+		$('#filter').show('fast');
+	});
+	
+	$('#FilterSchliessen').click(function(){
+		$('#filter').hide('fast');
 	});
 });
 
+// Achtung: Breitenangabe noch nicht richtig!
+function EinAusblenden(ele){
+	if (document.documentElement.clientWidth < 768) {
+		$(ele).hide();
+	} else {
+		$(ele).show();
+	}
+}
 
+$(window).resize(function() {
+    EinAusblenden('nav');
+});
 
 $(window).load(function() {
 
