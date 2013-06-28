@@ -500,3 +500,99 @@ article aside a {
 	border: 1px solid rgba(0,0,0,.05);
 	margin-bottom: 1em;
 }
+
+/* CSS-Angaben für Eingabeformular, danke.html, datenschutzerklaerung.html und nutzungsbedingungen.html */
+
+body.formular  {font-family: Arial,sans-serif;color:#000; font-size: 0.9em; line-height:1.5;padding-bottom:2em;}
+
+.formular p, ul, ol {margin: 0 0 1.5em;}
+
+.formular ul {margin-left:2em;}
+
+.formular h1 {font-size: 1.75em;margin-top:1.5em;margin-bottom:.2em;font-weight:bold;}
+.formular h2 {font-size: 140%;margin-top: 1.8em;margin-bottom:.5em;}
+.formular #wrap {width: 960px; margin: 1em auto;}
+
+.formular table {width: 100%;}
+
+.formular tr {
+	border-bottom: 1px solid #ddd;
+}
+
+.formular td {
+	vertical-align: top;
+	padding: .8em 0;
+}
+
+.formular td:nth-of-type(1) {
+	width:19em;
+	overflow:auto;
+}
+
+.formular td:nth-of-type(2) div {
+	width:32%;
+	float:left;
+}
+
+.formular .Hilfetext {color:grey; font-size: 80%; width:92%} 
+
+.formular textarea {
+	width: 30em;
+	height: 21em;
+	border: 1px solid #ddd;
+	padding: .4em .2em;
+	font-family: Arial, sans-serif;
+	font-size: 0.8em;
+}
+
+.formular textarea:focus {
+	border-color: #444;
+}
+
+.formular input[type="text"],
+.formular input[type="email"]{
+	width: 30em;
+	border: 1px solid #ddd;
+	padding: .4em .2em;
+	font-family: Arial, sans-serif;
+	font-size: 0.8em;
+}
+
+.formular input[type="text"]:focus {
+	border-color: #444;
+}
+
+.formular input[type="radio"] {
+	position: relative;
+	top: -2.5px;
+}
+
+.formular input[type="checkbox"]{
+	position: relative;
+	top: -1px;
+}
+
+.formular input#Zustimmung1 {
+	float:right;
+	margin-right: 1em;
+	margin-top: 5px;
+}
+
+.formular input#Zustimmung2 {
+	float:right;
+	margin-right: 1em;
+	margin-top: 5px;
+}
+
+.formular #buttons {
+	margin-left: 19em;
+	padding-top: 2em;
+}
+
+.formular .Schlagwort input {
+	margin: .3em 0;
+	}
+	
+.formular header {border-bottom: 1px solid black;padding-bottom:.3em;}
+
+.formular #pflicht {float:right;margin-top:.5em;font-weight:bold;}
