@@ -1,4 +1,4 @@
-/* Stylesheet ab 64em (ca. 1024px) Breite */
+/* desktop */
 
 /* #wrap und header div müssen gleiche Breite usw. haben! */
 #wrap {
@@ -98,7 +98,12 @@ nav {
 
 /* Elemente, die auf Desktop unsichtbar sein sollen */
 .nurSmartphone {
-	display: none;
+	display: none !important;
+}
+
+/* Elemente, die nur auf Desktop sichtbar sein sollen */
+.nurDesktop {
+	display: block;
 }
 
 nav #hauptmenu {
@@ -143,7 +148,7 @@ nav #suchbereich {
 
 #sprachwahl li {
 	float: right;
-	width: 2.2em;
+	width: 2.4em;
 	text-align: right;
 	margin-right: 0;
 	border-bottom: none;
@@ -177,6 +182,7 @@ footer div {
 
 
 #content {
+	margin-top: 7em;
 	width: 81%;
 	float: right;
 }
@@ -186,10 +192,7 @@ footer div {
 }
 
 .bilderGalerie li {
-	width: 23.7%;
-	margin-right: .9em;
-	text-align: left;
-	float:left;
+	width: 23.3%;
 }
 
 article h1.projekttitel {
@@ -242,9 +245,25 @@ article h1.projekttitel {
 	position: relative;
 }
 
+.ausstellung article .links {
+	width: auto;
+	float: none;
+}
+
+
+
 .information #content {
 	width: 81%;
 	position: relative;}
+	
+.information article,
+.projektbeschreibungen {
+	-webkit-column-width: auto;
+	   -moz-column-width: auto;
+	    -ms-column-width: auto;
+	     -o-column-width: auto;
+	        column-width: auto;
+}
 	
 .information aside {
 	margin-left: 50%;
@@ -264,15 +283,20 @@ article h1.projekttitel {
 	height: auto;
 	margin-bottom: 1.8em;
 	margin-top: 1em;
+	float:none;
 }
 
-.informationsbild {
+.informationsbild{
 	width:47.5%;
-	height: auto;
 	margin-bottom: 1.8em;
 	margin-top: 2em;
 	float:left;
-	}
+}
+
+.informationsbild img {
+	width: 100%;
+	height: auto;
+}
 
 
 #zurueck {

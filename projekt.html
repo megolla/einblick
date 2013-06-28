@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="de"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="de"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="de"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de"> <!--<![endif]-->
+<html lang="de">
 <head>
 <title>Einblick 2013 / Projekt</title>
 <meta charset="utf-8">
@@ -17,26 +14,14 @@
 <script type="text/javascript" src="//use.typekit.net/qbo8eji.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
-<!-- Reset-Stylesheet -->
+<!--[if gte IE 9]><!--> 
 <link rel="stylesheet" href="c/reset.css" />
-
-<!-- Einbinden des Einblick-Fonts -->
 <link rel="stylesheet" href="c/einblick_font.css" />
 
-<!-- Grundlegendes Stylesheet (Farben, Typo, kleinstes Display (z.B. iPhone Hochformat) -->
 <link rel="stylesheet" href="c/basic.css" />
-
-<!-- ab ca. 400px -->
-<link rel="stylesheet" media="screen and (min-width: 25em)" href="c/q_25XX.css" />
-
-<!-- ab ca. 768px (iPad Hochformat) -->
-<link rel="stylesheet" media="screen and (min-width: 48em)" href="c/q_48XX.css" />
-
-<!-- desktop -->
-<link rel="stylesheet" media="screen and (min-width: 860px)" href="c/desktop.css" />
-
-<!-- Print-Stylesheet -->
-<link rel="stylesheet" media="print" href="c/print.css" />
+<link rel="stylesheet" media="screen and (min-width: 570px)" href="c/mittel.css" />
+<link rel="stylesheet" media="screen and (min-width: 815px)" href="c/desktop.css" />
+<!--<![endif]-->
 
 <!--[if IE]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -45,7 +30,7 @@
 </head>
 
 <!-- hat body die Klasse "debug" werden viele outlines sichtbar! -->
-<body class="debugXX projekt">
+<body class="projekt">
 
 <header>
 
@@ -53,9 +38,15 @@
 
 <h1 id="logo"><a href="index.html" title="zurück zur Startseite">Einblick</a></h1>
 
+<!-- zurück-Button auf SmartPhones, bringt mich zur Übersichtsseite mit meinen Filtereinstellungen zurück -->
+<a id="ProjektZurueck" class="nurSmartphone" href="index.html"><img src="assets/Pfeillinks_mobile.gif" alt="Pfeillinks_mobile" width="11" height="12"></a>
+
 <img id="navMenueOeffnen" class="nurSmartphone" src="assets/Menue.gif" alt="Menue_weiss" width="20" height="14">
 
 <nav>
+
+<img id="navMenueSchliessen" class="nurSmartphone" src="assets/Menue_schwarz.gif" alt="Menue" width="20" height="14">
+
 <ul id="hauptmenu">
 <li><a href="information.html">Information</a></li>
 <li><a href="ausstellung.html">Ausstellung</a></li>
@@ -92,7 +83,7 @@
 <div id="wrap">
 
 <!-- der Zurückbutton bringt mich zur Übersichtsseite mit meinen Filtereinstellungen zurück-->
-<a id="zurueck" href="index.html" title="zurück zur Startseite">zurück</a>
+<a id="zurueck" class="nurDesktop" href="index.html" title="zurück zur Startseite">zurück</a>
 
 <section id="content">
 
@@ -115,7 +106,7 @@
 
 <div class="projektbeschreibungen">
 „Zensur“ ist Titel einer gestalterischen Bachelorarbeit, die sich auf 
-typografische Weise mit Zensur auseinandersetzt. Es handelt sich um ein Buch mit der Größe von 36cm x 27cm: ein unhandliches Format für ein unhandliches Thema.<br><br>Zu Beginn galt es herauszufinden, welche Arten von Zensur es gibt, wo Zensur stattfindet und wie sie sich auswirkt. Bei intensiver Betrachtung verschwimmen allerdings die Grenzen, ab wann man von einer Zensur sprechen kann. Zudem war es schwierig, an konkrete Fälle von Zensur zu kommen.<br><br>Also entschied ich mich, deren Auswirkungen darzustellen. Durch Zensur kann nur ein unvollständiges Gesamtbild entstehen, und nur durch intensive Auseinandersetzung mit speziellen Themen merkt man, dass in der Themenaufarbeitung etwas nicht stimmt bzw. dass etwas fehlt. Dieses Gefühl des„Fehlens“, des „Hier-stimmt-etwas-nicht“ sollte dem Betrachter typografisch vermittelt werden.
+typografische Weise mit Zensur auseinandersetzt. Es handelt sich um ein Buch mit der Größe von 36cm x 27cm: ein unhandliches Format für ein unhandliches Thema. Zu Beginn galt es herauszufinden, welche Arten von Zensur es gibt, wo Zensur stattfindet und wie sie sich auswirkt. Bei intensiver Betrachtung verschwimmen allerdings die Grenzen, ab wann man von einer Zensur sprechen kann. Zudem war es schwierig, an konkrete Fälle von Zensur zu kommen. Also entschied ich mich, deren Auswirkungen darzustellen. Durch Zensur kann nur ein unvollständiges Gesamtbild entstehen, und nur durch intensive Auseinandersetzung mit speziellen Themen merkt man, dass in der Themenaufarbeitung etwas nicht stimmt bzw. dass etwas fehlt. Dieses Gefühl des„Fehlens“, des „Hier-stimmt-etwas-nicht“ sollte dem Betrachter typografisch vermittelt werden.
 </div> <!-- /mehrspaltig -->
 
 <aside>
@@ -132,13 +123,9 @@ typografische Weise mit Zensur auseinandersetzt. Es handelt sich um ein Buch mit
 
 </article>
 
-</section>
+<a id="topScroll" class="nurSmartphone" href="#logo" title="nach oben scrollen">top</a>
 
-<!--
-<footer>
-<div><a href="#wrap" title=''>Impressum</a> | <a href="eingabe_formular/index.html" title=''>Login</a> | <a href="#wrap" title=''>nach oben scrollen</a></div>
-</footer>
--->
+</section>
 
 </div><!-- /wrap -->
 
@@ -146,7 +133,7 @@ typografische Weise mit Zensur auseinandersetzt. Es handelt sich um ein Buch mit
 <script>!window.jQuery && document.write('<script src="js/jquery-1.10.0.min.js"><\/script>')</script>
 
 <!-- eigene Skripte -->
-<script src="js/script-ck.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>

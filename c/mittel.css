@@ -1,0 +1,34 @@
+/* zwischen iPhone und Desktop */
+
+.information article,
+.projektbeschreibungen {
+	-webkit-column-width: 25em;
+	   -moz-column-width: 25em;
+	    -ms-column-width: 25em;
+	     -o-column-width: 25em;
+	        column-width: 25em;
+
+	-webkit-column-gap: 1em;
+	   -moz-column-gap: 1em;
+	    -ms-column-gap: 1em;
+	     -o-column-gap: 1em;
+	        column-gap: 1em;
+}
+
+.ausstellung article .links {
+	width: 49%;
+	float:left;
+}
+
+.ausstellung aside,
+.lageplan {
+	float: right;
+	width: 49%;
+	margin-top: 1.3em;
+}
+
+.bilderGalerie li {
+	width: 31.5%;
+	margin-right: .9em;
+	float:left;
+}

@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="de"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="de"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="de"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de"> <!--<![endif]-->
+<html lang="de">
 <head>
 <title>Einblick 2013</title>
 <meta charset="utf-8">
@@ -17,26 +14,14 @@
 <script type="text/javascript" src="//use.typekit.net/qbo8eji.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
-<!-- Reset-Stylesheet -->
+<!--[if gte IE 9]><!--> 
 <link rel="stylesheet" href="c/reset.css" />
-
-<!-- Einbinden des Einblick-Fonts -->
 <link rel="stylesheet" href="c/einblick_font.css" />
 
-<!-- Grundlegendes Stylesheet (Farben, Typo, kleinstes Display (z.B. iPhone Hochformat) -->
 <link rel="stylesheet" href="c/basic.css" />
-
-<!-- ab ca. 400px -->
-<link rel="stylesheet" media="screen and (min-width: 25em)" href="c/q_25XX.css" />
-
-<!-- ab ca. 768px (iPad Hochformat) -->
-<link rel="stylesheet" media="screen and (min-width: 48em)" href="c/q_48XX.css" />
-
-<!-- desktop -->
+<link rel="stylesheet" media="screen and (min-width: 570px)" href="c/mittel.css" />
 <link rel="stylesheet" media="screen and (min-width: 815px)" href="c/desktop.css" />
-
-<!-- Print-Stylesheet -->
-<link rel="stylesheet" media="print" href="c/print.css" />
+<!--<![endif]-->
 
 <!--[if IE]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -45,7 +30,7 @@
 </head>
 
 <!-- hat body die Klasse "debug" werden viele outlines sichtbar! -->
-<body class="debugXX">
+<body class="">
 
 <aside id="abdecker">
 <p>Einblick</p>
@@ -711,7 +696,7 @@
 </section>
 
 <footer>
-<div><a href="http://w3-n.hm.edu/sekundaer_navigation/impressum/index.de.html" title='Impressum der Hochschule München' target="_blank">Impressum</a> | <a href="eingabe_formular/index.html" title='Login'>Login</a> | <a href="#wrap" title=''>nach oben scrollen</a></div>
+<div><a id="topScroll" class="startseite" href="#logo" title="nach oben scrollen">top</a> | <a href="http://w3-n.hm.edu/sekundaer_navigation/impressum/index.de.html" title='Impressum der Hochschule München' target="_blank">Impressum</a> | <!-- ACHTUNG: Hier Link zur Login-Maske für die Absolventen einbauen! --><a href="eingabe_formular/index.html" title='Login'>Login</a></div>
 </footer>
 
 </div><!-- /wrap -->
@@ -720,7 +705,7 @@
 <script>!window.jQuery && document.write('<script src="js/jquery-1.10.0.min.js"><\/script>')</script>
 
 <!-- eigene Skripte -->
-<script src="js/script-ck.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>
