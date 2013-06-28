@@ -161,38 +161,21 @@ nav #suche {
 
 nav #suchbereich {
 	text-transform: none;
-	background: #444;
 	color: #fff;
 	position: absolute;
 	left: 0;
-	top: 1.3em;
+	top: 2.3em;
 	width: 100%;
-	min-height: 22em;
-	padding: 4em 1em 3em 0;
 	z-index: 1000;
 }
 
 nav #suchbereich input {
-	width: 100%;
+	width: 98%;
 	border: none;
-	/* 
-	nächste 2 Zeilen machen runde Suchfelder bei Webkit weg
-	aber das Padding bleibt leider!
-	*/
-	/* -webkit-appearance: none;
-	border-radius: none;*/
-	border-bottom: 1px solid #ccc;
-	margin-bottom: 1.5em;
-}
+	font-size: 100%;
+	padding: .3em 0;
+	border-bottom: 1px solid #444;
 
-.vorschlaege li {
-	float: none;
-	width: 100%;
-	color: #ccc
-}
-
-.vorschlaege li a {
-	color: #ccc;
 }
 
 #sprachwahl {
@@ -356,14 +339,14 @@ nav #suchbereich input {
 }
 
 #abdecker {
-	background: rgba(255,255,255,0.8) url("../p/abdecker/wolpertinger.png") no-repeat 50% 50%;
+	background: rgba(255,255,255,0.5) no-repeat 50% 50%;
 	font-family: "einblick",Impact,Tahoma,Arial,Sans-Serif;
 	text-transform: uppercase;
 	color: #000;
 	width: 99%;
 	position: fixed;
 	z-index: 10000000;
-	left: .4em;
+	left: 0;
 	top: 0;
 	bottom: 0;
 	-webkit-box-sizing: border-box;
@@ -390,14 +373,15 @@ nav #suchbereich input {
 
 #abdecker p {
 	width: 100%;
-	font-size: 550%;
+	font-size: 287%;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-ms-box-sizing: border-box;
 	-o-box-sizing: border-box;
 	box-sizing: border-box;
-	padding: 0 0 0 .1em;
-	line-height: 1
+	padding: 0 0 0 0.05em;
+	line-height: 1;
+	margin-top: .52em;
 }
 
 /*#zurueck {
@@ -503,9 +487,18 @@ article aside a {
 
 /* CSS-Angaben für Eingabeformular, danke.html, datenschutzerklaerung.html und nutzungsbedingungen.html */
 
-body.formular  {font-family: Arial,sans-serif;color:#000; font-size: 0.9em; line-height:1.5;padding-bottom:2em;}
 
-.formular p, ul, ol {margin: 0 0 1.5em;}
+body.formular  {font-family: Arial,sans-serif;color:#000; font-size: 0.8em; color:#444;line-height:1.5;padding-bottom:2em;}
+
+
+.formular a {
+	border-bottom: 1px dotted;
+	color: #444;
+}
+
+.formular p, .formular ul, .formular ol {margin: 0 0 1.5em;width:80%;}
+
+.formular .zustimmung {width: 75%; display: block;}
 
 .formular ul {margin-left:2em;}
 
@@ -515,8 +508,8 @@ body.formular  {font-family: Arial,sans-serif;color:#000; font-size: 0.9em; line
 
 .formular table {width: 100%;}
 
-.formular tr {
-	border-bottom: 1px solid #ddd;
+.formular tr td {
+	border-bottom: 1px solid #e6e6e6;
 }
 
 .formular td {
@@ -525,7 +518,7 @@ body.formular  {font-family: Arial,sans-serif;color:#000; font-size: 0.9em; line
 }
 
 .formular td:nth-of-type(1) {
-	width:19em;
+	width:24em;
 	overflow:auto;
 }
 
@@ -542,7 +535,7 @@ body.formular  {font-family: Arial,sans-serif;color:#000; font-size: 0.9em; line
 	border: 1px solid #ddd;
 	padding: .4em .2em;
 	font-family: Arial, sans-serif;
-	font-size: 0.8em;
+	font-size: 1em;
 }
 
 .formular textarea:focus {
@@ -555,7 +548,7 @@ body.formular  {font-family: Arial,sans-serif;color:#000; font-size: 0.9em; line
 	border: 1px solid #ddd;
 	padding: .4em .2em;
 	font-family: Arial, sans-serif;
-	font-size: 0.8em;
+	font-size: 1em;
 }
 
 .formular input[type="text"]:focus {
@@ -585,7 +578,7 @@ body.formular  {font-family: Arial,sans-serif;color:#000; font-size: 0.9em; line
 }
 
 .formular #buttons {
-	margin-left: 19em;
+	margin-left: 24em;
 	padding-top: 2em;
 }
 
@@ -596,3 +589,5 @@ body.formular  {font-family: Arial,sans-serif;color:#000; font-size: 0.9em; line
 .formular header {border-bottom: 1px solid black;padding-bottom:.3em;}
 
 .formular #pflicht {float:right;margin-top:.5em;font-weight:bold;}
+
+*/

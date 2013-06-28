@@ -84,9 +84,6 @@
      Begin script.js
 ********************************************** */
 
-//@codekit-prepend "fitText.js";
-//@codekit-prepend "riseToolbar.js"; 
-
 var Abdecker_modus = readCookie('Abdecker');
 console.log(Abdecker_modus);
 
@@ -144,7 +141,7 @@ $(function(){
 		$('#abdecker').hide();
 	} else {
 		// Schrift via FitText anpassen
-		$("#abdecker").fitText(3, { minFontSize: '16px', maxFontSize: '30px' });
+		$("#abdecker").fitText();
 	}
 	
 	// Abdecker unsichtbar machen
@@ -219,9 +216,9 @@ $(function(){
 	var sucheSichtbar;
 	$('#suche').click(function(){
 		if (sucheSichtbar == 1){
-			$('#suchbereich').slideUp('fast');
+			$('#suchbereich').hide('fast');
 		} else {
-			$('#suchbereich').slideDown('fast');
+			$('#suchbereich').show('fast');
 		}
 		sucheSichtbar = !sucheSichtbar;
 		return false;
