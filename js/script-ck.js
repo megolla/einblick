@@ -98,7 +98,7 @@ console.log(Abdecker_modus);
 */
 var Filterausblenden; // globale Variable!
 function browserBreite(){
-	if (document.documentElement.clientWidth < 768) {
+	if (document.documentElement.clientWidth < 815) {
 		Filterausblenden = 1;
 	} else {
 		Filterausblenden = 0;
@@ -300,9 +300,9 @@ $(function(){
 	});
 });
 
-// Achtung: Breitenangabe noch nicht richtig!
+// Blendet Navigation und Filter ein/aus
 function EinAusblenden(ele){
-	if (document.documentElement.clientWidth < 768) {
+	if (document.documentElement.clientWidth < 815) {
 		$(ele).hide();
 	} else {
 		$(ele).show();
@@ -311,6 +311,7 @@ function EinAusblenden(ele){
 
 $(window).resize(function() {
     EinAusblenden('nav');
+    EinAusblenden('#filter');
 });
 
 $(window).load(function() {

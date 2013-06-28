@@ -36,20 +36,24 @@ header div {
 /* #logo und #filter müssen gleiche Breite usw. haben! */
 
 #logo {
-	width: 15%;
+	width: 17%;
 	float: left;
 	text-align: left;
 }
 
 #filter {
-	width: 15%;
-	max-width: 15%;
+	width: 16%;
+	max-width: 16%;
 	position: relative;
 	float: left;
-	margin-top: 7em;
+	margin-top: 3.1em;
 	background: transparent;
 	padding-left: 0;
 	display: block;
+}
+
+#filter #hauptfilter {
+	width: 100%;
 }
 
 #filter a {color: #444;}
@@ -62,6 +66,20 @@ header div {
 #filter .ausgewaehlt a {
 	color: #444;
 }
+
+
+#filter .haupt:before {
+	content: url(../assets/Pfeilunten.gif);}
+
+#filter .haupt.offen:before {
+	content: url(../assets/Pfeiloben.gif)
+}
+
+#filterZurueckSetzen:before {
+	content: url(../assets/Schliessen.gif);
+	left:-1px;
+	}
+
 
 /* nav und #content müssen gleiche Breite usw. haben! */
 
@@ -204,24 +222,9 @@ article h1.projekttitel {
 }
 
 .projekt article {
-	width: 36.5%;
+	width: 35%;
 	max-width: 42em;
-	position: fixed;
 	margin-top: 5.4em;
-}
-
-article .mehrspaltig {
-	-webkit-column-count: 2;
-	   -moz-column-count: 2;
-	    -ms-column-count: 2;
-	     -o-column-count: 2;
-	        column-count: 2;
-	        
-	-webkit-column-gap: 1em;
-	   -moz-column-gap: 1em;
-	    -ms-column-gap: 1em;
-	     -o-column-gap: 1em;
-	        column-gap: 1em;
 }
 
 .debug article {
@@ -229,9 +232,8 @@ article .mehrspaltig {
 }
 
 .einspaltig {
-	width: 48%;
+	width: 47.5%;
 	float: left;
-	margin-bottom: 1.8em;
 }
 
 .ausstellung #content {
@@ -240,32 +242,70 @@ article .mehrspaltig {
 	position: relative;
 }
 
+.information #content {
+	width: 81%;
+	position: relative;}
+	
+.information aside {
+	margin-left: 50%;
+	width: 48%;
+	margin-bottom: 1.8em;
+	margin-top: 1.8em;
+	}
 
 .ausstellungsbild {
-	width:48%;
+	width:47.5%;
 	height: auto;
 	margin-bottom: 1.8em;
 }
 
 .lageplan {
-	width:48%;
+	width:47.5%;
 	height: auto;
 	margin-bottom: 1.8em;
+	margin-top: 1em;
 }
+
+.informationsbild {
+	width:47.5%;
+	height: auto;
+	margin-bottom: 1.8em;
+	margin-top: 2em;
+	float:left;
+	}
 
 
 #zurueck {
+	width: 15%;
+	max-width: 15%;
 	position: fixed;
+	float: left;
+	margin-top: 7em;
+	margin-left: 1em;
+	background: transparent;
+	padding-left: 0;
+	display: block;
+
+	
+
+	/*position: fixed;
 	top: 6.7em;
 	left: 3em;
 	border-bottom: none;
 	z-index: 100;
+	*/
 }
 
+.projekt #zurueck {
+	margin-top: 0em;
+	z-index: 100;
+}
+
+
 .ausstellung aside {
-	width: 48%;
+	width: 50%;
 	float: right;
-	margin-top: 17.5em;
+	margin-top: 17.7em;
 }
 
 .ausstellung article {
